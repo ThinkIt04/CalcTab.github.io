@@ -16,13 +16,14 @@ html body {
 }
 
 html body .nav-bar {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: 1;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -224,13 +225,211 @@ html body .nav-bar #bar, html body .nav-bar #back {
 
 html body #date-time {
   font-family: 'Stardos Stencil', cursive;
-  position: fixed;
+  position: relative;
   left: 0;
-  top: 4rem;
+  z-index: 1;
+  width: 35ch;
   border-radius: 0 0 7rem 0;
   color: black;
-  opacity: 0.5;
+  opacity: 0.8;
   padding: 0.25rem 2rem 0.25rem 0.25rem;
   background-color: #dc3545;
+}
+
+html body #list-item-1 {
+  max-width: 576px;
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#1a1717), to(#dc3545));
+  background-image: linear-gradient(to bottom left, #1a1717, #dc3545);
+  border-radius: 1.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 1rem;
+}
+
+@media (max-width: 586px) {
+  html body #list-item-1 {
+    max-width: 460px;
+  }
+}
+
+@media (max-width: 470px) {
+  html body #list-item-1 {
+    max-width: 360px;
+  }
+}
+
+html body #list-item-1 form {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 1rem;
+  background-color: #dcdcdc;
+  overflow: hidden;
+}
+
+html body #list-item-1 form input, html body #list-item-1 form button {
+  outline: none;
+  font-size: 1.5rem;
+}
+
+html body #list-item-1 form nav {
+  position: relative;
+  padding: 0.5rem 1rem 0 1rem;
+  background-color: #cacaca;
+}
+
+html body #list-item-1 form nav h3 {
+  font-size: 1.5rem;
+}
+
+html body #list-item-1 form nav i {
+  position: absolute;
+  right: 1.5rem;
+  font-size: 1rem;
+  font-weight: light;
+  line-height: 1.5rem;
+}
+
+html body #list-item-1 form nav div {
+  height: 0.5rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  width: 100%;
+  background-color: #dcdcdc;
+}
+
+html body #list-item-1 form div {
+  padding: 0.5rem 2rem 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+html body #list-item-1 form div #result {
+  color: white;
+  border-radius: 5px;
+  text-align: right;
+  padding: 15px 25px;
+  border: none;
+  background-color: #2b0e36;
+  -webkit-box-shadow: 0px -5px 0px 0px #82409D;
+          box-shadow: 0px -5px 0px 0px #82409D;
+}
+
+html body #list-item-1 form div #copy {
+  padding: 0;
+}
+
+html body #list-item-1 form div #cancel {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 586px) {
+  html body #list-item-1 form div .row3 {
+    margin: 0 0 1rem 0;
+  }
+}
+
+html body #list-item-1 form div .row1 {
+  margin: 0 0 1rem 0;
+}
+
+html body #list-item-1 form div .row2 {
+  margin: 0 0 1rem 1rem;
+}
+
+@media (max-width: 470px) {
+  html body #list-item-1 form div .row2 {
+    margin: 0 0 1rem 0.5rem;
+  }
+}
+
+html body #list-item-1 form div .row3 {
+  margin: 0 1rem 1rem 0;
+}
+
+@media (max-width: 586px) {
+  html body #list-item-1 form div .row3 {
+    margin: 0 1.9rem 1rem 0.9rem;
+  }
+}
+
+@media (max-width: 470px) {
+  html body #list-item-1 form div .row3 {
+    margin: 0 1.25rem 1rem 0.75rem;
+  }
+}
+
+@media (max-width: 356px) {
+  html body #list-item-1 form div .row3 {
+    margin: 0 1rem 1rem 0.75rem;
+  }
+}
+
+@media (max-width: 281px) {
+  html body #list-item-1 form div .row3 {
+    margin: 0 0.75rem 1rem 0.55rem;
+  }
+}
+
+html body #list-item-1 form div .row4 {
+  margin: 0 0 0 0.5rem;
+}
+
+html body #list-item-1 form div input[type=button] {
+  border-radius: 5px;
+  text-align: center;
+  padding: 1rem auto 1rem;
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border: none;
+}
+
+html body #list-item-1 form div input[type=button]:active {
+  -webkit-transform: translate(0px, 5px);
+          transform: translate(0px, 5px);
+  -webkit-box-shadow: 0px 1px 0px 0px;
+          box-shadow: 0px 1px 0px 0px;
+}
+
+html body #list-item-1 form div .red {
+  background-color: #882d22;
+  -webkit-box-shadow: 0px 5px 0px 0px #CE3323;
+          box-shadow: 0px 5px 0px 0px #CE3323;
+}
+
+html body #list-item-1 form div .red:active {
+  background-color: #e74c3c;
+}
+
+html body #list-item-1 form div .blue {
+  background-color: #2c5675;
+  -webkit-box-shadow: 0px 5px 0px 0px #3C93D5;
+          box-shadow: 0px 5px 0px 0px #3C93D5;
+}
+
+html body #list-item-1 form div .blue:active {
+  background-color: #55acee;
+}
+
+html body #list-item-1 form div .green {
+  background-color: #1a5f37;
+  -webkit-box-shadow: 0px 5px 0px 0px #15B358;
+          box-shadow: 0px 5px 0px 0px #15B358;
+}
+
+html body #list-item-1 form div .green:active {
+  background-color: #2ecc71;
 }
 /*# sourceMappingURL=style.css.map */

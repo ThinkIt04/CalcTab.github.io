@@ -34,12 +34,44 @@
       </nav>
       <nav id="date-time"></nav>
       <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
-         <h4 id="list-item-1">Item 1</h4>
-         <p>...</p>
-         <h4 id="list-item-2">Item 2</h4>
+         <div id="list-item-1" class="container">
+            <form>
+               <nav class="row">
+                  <h3 class="col-11">Calculator</h3>
+                  <i class="fas fa-ellipsis-h col-1"></i>
+                  <div class="col-12"></div>
+               </nav>
+               <div class="row">
+                  <input class="col-12" type="text" name="result" id="result" autocomplete="off">
+                  <input type="button" class="col-3 col-sm- red" onclick="copyInput()" id="copy" value="Copy">
+                  <input type="button" class="col-3 row4 red" onclick="this.form.result.value = '' " id="cancel" value="DEL">
+                  <input type="button" class="col-2 row4 red" onclick="deleteChar(this.form.result)" value="⌫">
+                  <input type="button" class="col-2 row4 red" onclick="solve()" value="=">
+                  <input type="button" class="col-2 row1 blue" onclick="display('7')" value="7">
+                  <input type="button" class="col-2 row2 blue" onclick="display('8')" value="8">
+                  <input type="button" class="col-2 row2 blue" onclick="display('9')" value="9">
+                  <input type="button" class="col-2 row2 green" onclick="display('(')" value="(">
+                  <input type="button" class="col-2 row2 green" onclick="display(')')" value=")">
+                  <input type="button" class="col-2 row1 blue" onclick="display('4')" value="4">
+                  <input type="button" class="col-2 row2 blue" onclick="display('5')" value="5">
+                  <input type="button" class="col-2 row2 blue" onclick="display('6')" value="6">
+                  <input type="button" class="col-2 row2 green" onclick="display('/')" value="/">
+                  <input type="button" class="col-2 row2 green" onclick="display('*')" value="*">
+                  <input type="button" class="col-2 row1 blue" onclick="display('3')" value="3">
+                  <input type="button" class="col-2 row2 blue" onclick="display('2')" value="2">
+                  <input type="button" class="col-2 row2 blue" onclick="display('1')" value="1">
+                  <input type="button" class="col-2 row2 green" onclick="display('-')" value="-">
+                  <input type="button" class="col-2 row2 green" onclick="display('+')" value="+">
+                  <input type="button" class="col-6 col-sm-7 row3 blue" onclick="display('0')" value="0">
+                  <input type="button" class="col-2 row1 green" onclick="display('%')" value="%">
+                  <input type="button" class="col-2 row2 green" onclick="display('.')" value=".">
+               </div>
+            </form>
+         </div>
+         <!-- <h4 id="list-item-2">Item 2</h4>
          <p>...</p>
          <h4 id="list-item-3">Item 3</h4>
-         <p>...</p>
+         <p>...</p> -->
       </div>
 
       <!-- Script -->
