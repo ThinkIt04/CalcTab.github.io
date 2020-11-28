@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&family=Stardos+Stencil&display=swap');
+
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     scroll-behavior: smooth;
+     font-family: 'Nova Mono', monospace;
+}
+
+html{
+     body{
+          background-image: url("../IMAGES/P4LP9H0-mathematics-wallpaper.jpg");
+          background-attachment: fixed;
+          background-size: cover;
+          background-position: center;
+          .nav-bar{
+               position: fixed;
+               top: 0;
+               left: 0;
+               width: 100%;
+               display: flex;
+               align-items: center;
+               flex-direction: row;
+               padding-left: 1rem;
+               padding-top: 0.5rem;
+               font-size: 1.5rem;
+               background-color: rgba(26, 23, 23, 0.404);
+               h1{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: row;
+                    color: gainsboro;
+                    span{
+                         opacity: 0;
+                         font-size: 0.5rem;
+                    }
+               }
+               #list-example{
+                    position: absolute;
+                    right: 1rem;
+                    width: auto;
+                    z-index: 1;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    flex-direction: row;
+                    .list{
+                         text-decoration: none;
+                         color: gainsboro;
+                         opacity: 0.5;
+                         padding: 0 1.5rem 0 1.5rem;
+                         &:hover{
+                              opacity: 1;
+                         }
+                         &.active{
+                              opacity: 1;
+                         }
+                    }
+                    #li1{
+                         &::before{
+                              content: "Home";
+                              position: absolute;
+                              width: 0%;
+                              color: transparent;
+                              overflow: hidden;
+                              border-bottom: 3px solid #dc3545;
+                              transition: all 0.4s ease-in-out;
+                         }
+                         &:hover::before{
+                              width: 4ch;
+                         }
+                         &.active::before{
+                              width: 4ch;
+                         }
+                    }
+                    #li2{
+                         &::before{
+                              content: "RateaUs";
+                              position: absolute;
+                              width: 0%;
+                              color: transparent;
+                              overflow: hidden;
+                              border-bottom: 3px solid #dc3545;
+                              transition: all 0.4s ease-in-out;
+                         }
+                         &:hover::before{
+                              width: 7ch;
+                         }
+                         &.active::before{
+                              width: 7ch;
+                         }
+                    }
+                    #li3{
+                         &::before{
+                              content: "SomeaFeelings";
+                              position: absolute;
+                              width: 0%;
+                              color: transparent;
+                              overflow: hidden;
+                              border-bottom: 3px solid #dc3545;
+                              transition: all 0.4s ease-in-out;
+                         }
+                         &:hover::before{
+                              width: 13ch;
+                         }
+                         &.active::before{
+                              width: 13ch;
+                         }
+                    }
+                    #li4{
+                         &::before{
+                              content: "ReportaProblem";
+                              position: absolute;
+                              width: 0%;
+                              color: transparent;
+                              overflow: hidden;
+                              border-bottom: 3px solid #dc3545;
+                              transition: all 0.4s ease-in-out;
+                         }
+                         &:hover::before{
+                              width: 14ch;
+                         }
+                         &.active::before{
+                              width: 14ch;
+                         }
+                    }
+               }
+               #bar, #back{
+                    display: none;
+                    position: absolute;
+                    right: 1rem;
+                    z-index: 2;
+                    color: gainsboro;
+                    font-size: 2rem;
+                    top: 1rem;
+                    transition: 1s ease-in-out;
+               }
+               @media (max-width:992px) {
+                    #bar{
+                         display: block;
+                    }
+                    #list-example{
+                         display: flex;
+                         animation-timing-function: ease-in;
+                         animation-duration: 0.5s;
+                         align-items: center;
+                         justify-content: center;
+                         flex-direction: column;
+                         position: absolute;
+                         right: 1rem;
+                         top: 4rem;
+                         transition: 1s ease-in-out;
+                         transform: translateY(-20rem);
+                         overflow: hidden;
+                         padding: 1rem;
+                         border-radius: 0 0 1rem 1rem;
+                         background-color: rgba(26, 23, 23, 0.404);
+                    }
+                    @media (max-width:576px) {
+                         #list-example{
+                              padding-top: 3rem;
+                         }
+                    }
+               }
+          }
+          #date-time{
+               font-family: 'Stardos Stencil', cursive;
+               position: fixed;
+               left: 0;
+               top: 4rem;
+               border-radius: 0 0 7rem 0;
+               color: black;
+               opacity: 0.5;
+               padding: 0.25rem 2rem 0.25rem 0.25rem;
+               background-color: #dc3545;
+          }
+     }
+}
