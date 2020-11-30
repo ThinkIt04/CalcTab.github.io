@@ -1,13 +1,15 @@
 function bar(){
      document.getElementById('bar').style.opacity = "0";
-     document.getElementById('list-example').style.transform = "translateY(0rem)";
+     document.getElementById('list-example').style.height = "15rem";
+     document.getElementById('list-example').style.opacity = "1";
      document.getElementById('bar').style.display = "none";
      document.getElementById('back').style.display = "block";
      document.getElementById('back').style.opacity = "1";
 }
 function barn(){
      document.getElementById('back').style.opacity = "0";
-     document.getElementById('list-example').style.transform = "translateY(-20rem)";
+     document.getElementById('list-example').style.height = "0";
+     document.getElementById('list-example').style.opacity = "0";
      document.getElementById('bar').style.display = "block";
      document.getElementById('back').style.display = "none";
      document.getElementById('bar').style.opacity = "1";
