@@ -321,6 +321,17 @@ html body #whole #list-item-1 #calculus {
   }
 }
 
+html body #whole #list-item-1 #calculus i {
+  position: absolute;
+  right: 2.5rem;
+  top: 1.5rem;
+  z-index: 1;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: light;
+  line-height: 1.5rem;
+}
+
 html body #whole #list-item-1 #calculus form {
   width: 100%;
   height: 100%;
@@ -345,15 +356,7 @@ html body #whole #list-item-1 #calculus form nav h3 {
   font-size: 1.5rem;
 }
 
-html body #whole #list-item-1 #calculus form nav i {
-  position: absolute;
-  right: 1.5rem;
-  font-size: 1rem;
-  font-weight: light;
-  line-height: 1.5rem;
-}
-
-html body #whole #list-item-1 #calculus form nav .col-12 {
+html body #whole #list-item-1 #calculus form nav div {
   height: 0.5rem;
   border-radius: 0.5rem 0.5rem 0 0;
   width: 100%;
@@ -430,18 +433,34 @@ html body #whole #list-item-1 #calculus form div .row3 {
 
 @media (max-width: 356px) {
   html body #whole #list-item-1 #calculus form div .row3 {
-    margin: 0 1rem 1rem 0.75rem;
+    margin: 0 0 1rem 0;
   }
 }
 
 @media (max-width: 281px) {
   html body #whole #list-item-1 #calculus form div .row3 {
-    margin: 0 0.75rem 1rem 0.55rem;
+    margin: 0 0 1rem 0;
   }
 }
 
 html body #whole #list-item-1 #calculus form div .row4 {
   margin: 0 0 0 0.5rem;
+}
+
+html body #whole #list-item-1 #calculus form div .row5 {
+  margin: 0 0 1rem 1rem;
+}
+
+@media (max-width: 356px) {
+  html body #whole #list-item-1 #calculus form div .row5 {
+    margin: 0 0 1rem 0;
+  }
+}
+
+@media (max-width: 281px) {
+  html body #whole #list-item-1 #calculus form div .row5 {
+    margin: 0 0 1rem 0;
+  }
 }
 
 html body #whole #list-item-1 #calculus form div input[type=button] {
@@ -491,6 +510,39 @@ html body #whole #list-item-1 #calculus form div .green {
 
 html body #whole #list-item-1 #calculus form div .green:active {
   background-color: #2ecc71;
+}
+
+html body #whole #list-item-1 #calculus #form1 {
+  height: 0;
+}
+
+html body #whole #list-item-1 #calculus #form1 input[type=button] {
+  border-radius: 5px;
+  text-align: center;
+  padding: 1rem auto 1rem;
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border: none;
+  padding: 0.5rem 0 0.25rem 0;
+  margin-bottom: 1rem;
+  background-color: #882d22;
+  -webkit-box-shadow: 0px 5px 0px 0px #CE3323;
+          box-shadow: 0px 5px 0px 0px #CE3323;
+}
+
+html body #whole #list-item-1 #calculus #form1 input[type=button]:active {
+  -webkit-transform: translate(0px, 5px);
+          transform: translate(0px, 5px);
+  -webkit-box-shadow: 0px 1px 0px 0px;
+          box-shadow: 0px 1px 0px 0px;
+  background-color: #e74c3c;
+}
+
+html body #whole #list-item-1 #calculus #form1 input[type=button]:hover {
+  background-color: #e74c3c;
 }
 
 html body #whole #list-item-2 {
@@ -636,6 +688,8 @@ html body #whole #list-item-2 .container form .fill .rat {
   font-size: 2rem;
   color: gray;
   background-color: transparent;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
 html body #whole #list-item-2 .container form button {

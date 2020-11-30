@@ -12,8 +12,8 @@
       <link rel="stylesheet" href="SCSS/style.css">
 
       <!-- SCRIPT -->
-      <script src="SCRIPT/script.js"></script>
       <script src="SCRIPT/script2.js"></script>
+      <script src="SCRIPT/script.js"></script>
 
       <!-- font-awesome -->
       <script type="text/javascript">
@@ -39,10 +39,10 @@
       <div id="whole">
          <div id="list-item-1">
             <div id="calculus" class="container">
-               <form id="form">
+               <i class="fas fa-ellipsis-h" onclick="menu()"></i>
+               <form id="form2">
                   <nav id="nav" class="row">
-                     <h3 class="col-11">Calculator</h3>
-                     <i class="fas fa-ellipsis-h col-1"></i>
+                     <h3 class="col-12">Calculator</h3>
                      <div id="div" class="col-12"></div>
                   </nav>
                   <div class="row">
@@ -50,7 +50,7 @@
                      <input type="button" class="col-3 col-sm- red" onclick="copyInput()" id="copy" value="Copy">
                      <input type="button" class="col-3 row4 red" onclick="this.form.result.value = '' " id="cancel" value="DEL">
                      <input type="button" class="col-2 row4 red" onclick="deleteChar(this.form.result)" value="⌫">
-                     <input type="button" class="col-2 row4 red" onclick="solve()" value="=">
+                     <input type="button" class="col-2 row4 green" onclick="display('.')" value=".">
                      <input type="button" class="col-2 row1 blue" onclick="display('7')" value="7">
                      <input type="button" class="col-2 row2 blue" onclick="display('8')" value="8">
                      <input type="button" class="col-2 row2 blue" onclick="display('9')" value="9">
@@ -67,8 +67,22 @@
                      <input type="button" class="col-2 row2 green" onclick="display('-')" value="-">
                      <input type="button" class="col-2 row2 green" onclick="display('+')" value="+">
                      <input type="button" class="col-6 col-sm-7 row3 blue" onclick="display('0')" value="0">
-                     <input type="button" class="col-2 row1 green" onclick="display('%')" value="%">
-                     <input type="button" class="col-2 row2 green" onclick="display('.')" value=".">
+                     <input type="button" class="col-4 row5 red" onclick="solve()" value="=">
+                  </div>
+               </form>
+               <form id="form1">
+                  <nav id="nav2" class="row">
+                     <h3 class="col-12">Options</h3>
+                     <div id="div" class="col-12"></div>
+                  </nav>
+                  <div class="row">
+                     <input type="button" class="col-12" value="Calculator" onclick="m1()">
+                     <input type="button" class="col-12" value="Scientific Calculator (commming soon)">
+                     <input type="button" class="col-12" value="Age Calculator (commming soon)">
+                     <input type="button" class="col-12" value="Weight Converter (commming soon)">
+                     <input type="button" class="col-12" value="Length Converter (commming soon)">
+                     <input type="button" class="col-12" value="Area Converter (commming soon)">
+                     <input type="button" class="col-12" value="Currency Converter (commming soon)">
                   </div>
                </form>
             </div>

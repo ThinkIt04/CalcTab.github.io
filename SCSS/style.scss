@@ -240,6 +240,16 @@ html{
                          @media (max-width:470px) {
                               max-width: 360px;
                          }
+                         i{
+                              position: absolute;
+                              right: 2.5rem;
+                              top: 1.5rem;
+                              z-index: 1;
+                              cursor: pointer;
+                              font-size: 1rem;
+                              font-weight: light;
+                              line-height: 1.5rem;
+                         }
                          form{
                               width: 100%;
                               height: 100%;
@@ -258,14 +268,7 @@ html{
                                    h3{
                                         font-size: 1.5rem;
                                    }
-                                   i{
-                                        position: absolute;
-                                        right: 1.5rem;
-                                        font-size: 1rem;
-                                        font-weight: light;
-                                        line-height: 1.5rem;
-                                   }
-                                   .col-12{
+                                   div{
                                         height: 0.5rem;
                                         border-radius: 0.5rem 0.5rem 0 0;
                                         width: 100%;
@@ -316,14 +319,23 @@ html{
                                              margin: 0 1.25rem 1rem 0.75rem;
                                         }
                                         @media (max-width:356px) {
-                                             margin: 0 1rem 1rem 0.75rem;
+                                             margin: 0 0 1rem 0;
                                         }
                                         @media (max-width:281px) {
-                                             margin: 0 0.75rem 1rem 0.55rem;
+                                             margin: 0 0 1rem 0;
                                         }
                                    }
                                    .row4{
                                         margin: 0 0 0 0.5rem;
+                                   }
+                                   .row5{
+                                        margin: 0 0 1rem 1rem;
+                                        @media (max-width:356px) {
+                                             margin: 0 0 1rem 0;
+                                        }
+                                        @media (max-width:281px) {
+                                             margin: 0 0 1rem 0;
+                                        }
                                    }
                                    input[type=button]{
                                         border-radius: 5px;
@@ -360,6 +372,32 @@ html{
                                         &:active {
                                              background-color: #2ecc71;
                                         }
+                                   }
+                              }
+                         }
+                         #form1{
+                              height: 0;
+                              input[type=button]{
+                                   border-radius: 5px;
+                                   text-align: center;
+                                   padding: 1rem auto 1rem;
+                                   text-decoration: none;
+                                   color: #fff;
+                                   position: relative;
+                                   display: inline-block;
+                                   outline: none;
+                                   border: none;
+                                   padding: 0.5rem 0 0.25rem 0;
+                                   margin-bottom: 1rem;
+                                   background-color: #882d22;
+                                   box-shadow: 0px 5px 0px 0px #CE3323;
+                                   &:active {
+                                        transform: translate(0px, 5px);
+                                        box-shadow: 0px 1px 0px 0px;
+                                        background-color: #e74c3c;
+                                   }
+                                   &:hover{
+                                        background-color: #e74c3c;
                                    }
                               }
                          }
@@ -466,6 +504,7 @@ html{
                                         font-size: 2rem;
                                         color: gray;
                                         background-color: transparent;
+                                        transition: 0.4s ease-in-out;
                                    }
                               }
                               button{
