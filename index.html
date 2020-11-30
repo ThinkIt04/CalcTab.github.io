@@ -46,11 +46,12 @@
                      <div id="div" class="col-12"></div>
                   </nav>
                   <div class="row">
-                     <input class="col-12" type="text" name="result" id="result" autocomplete="off">
-                     <input type="button" class="col-3 col-sm- red" onclick="copyInput()" id="copy" value="Copy">
-                     <input type="button" class="col-3 row4 red" onclick="this.form.result.value = '' " id="cancel" value="DEL">
-                     <input type="button" class="col-2 row4 red" onclick="deleteChar(this.form.result)" value="⌫">
-                     <input type="button" class="col-2 row4 green" onclick="display('.')" value=".">
+                     <input class="col-12" type="text" name="result" id="result" value="0" autocomplete="off">
+                     <input type="button" class="col-2 row1 red" onclick="copyInput()" id="copy" value="Copy">
+                     <input type="button" class="col-2 row2 red" onclick="this.form.result.value = '0' " id="cancel" value="DEL">
+                     <input type="button" class="col-2 row2 red" onclick="deleteChar(this.form.result)" value="⌫">
+                     <input type="button" class="col-2 row2 red" onclick="solve()" value="=">
+                     <input type="button" class="col-2 row2 green" onclick="display('.')" value=".">
                      <input type="button" class="col-2 row1 blue" onclick="display('7')" value="7">
                      <input type="button" class="col-2 row2 blue" onclick="display('8')" value="8">
                      <input type="button" class="col-2 row2 blue" onclick="display('9')" value="9">
@@ -66,8 +67,7 @@
                      <input type="button" class="col-2 row2 blue" onclick="display('1')" value="1">
                      <input type="button" class="col-2 row2 green" onclick="display('-')" value="-">
                      <input type="button" class="col-2 row2 green" onclick="display('+')" value="+">
-                     <input type="button" class="col-6 col-sm-7 row3 blue" onclick="display('0')" value="0">
-                     <input type="button" class="col-4 row5 red" onclick="solve()" value="=">
+                     <input type="button" class="col-12 col-sm-7 row5 blue" onclick="display('0')" value="0">
                   </div>
                </form>
                <form id="form1">
@@ -77,12 +77,51 @@
                   </nav>
                   <div class="row">
                      <input type="button" class="col-12" value="Calculator" onclick="m1()">
-                     <input type="button" class="col-12" value="Scientific Calculator (commming soon)">
+                     <input type="button" class="col-12" value="Scientific Calculator" onclick="m2()">
                      <input type="button" class="col-12" value="Age Calculator (commming soon)">
                      <input type="button" class="col-12" value="Weight Converter (commming soon)">
                      <input type="button" class="col-12" value="Length Converter (commming soon)">
                      <input type="button" class="col-12" value="Area Converter (commming soon)">
                      <input type="button" class="col-12" value="Currency Converter (commming soon)">
+                  </div>
+               </form>
+               <form id="form3">
+                  <nav id="nav" class="row">
+                     <h3 class="col-12">Scientific Calculator</h3>
+                     <div id="div" class="col-12"></div>
+                  </nav>
+                  <div class="row">
+                     <input class="col-12" type="text" name="display" id="display" value="0" autocomplete="off">
+                     <input type="button" class="col-2 row1 red" value="DEL" onclick="this.form.display.value= 0 ">
+                     <input type="button" class="col-2 row2 red" value="⌫" onclick="deleteChar(this.form.display)">
+                     <input type="button" class="col-2 row2 red" value="="onclick="if(checkNum(this.form.display.value)) { compute(this.form) }">
+                     <input type="button" class="col-2 row2 orange" value="&#960;" onclick="addChar(this.form.display,'3.14159265359')">
+                     <input type="button" class="col-2 row2 green" value="&#37;" onclick="percent(this.form.display)">
+                     <input type="button" class="col-2 row1 blue" value="7"onclick="addChar(this.form.display, '7')">
+                     <input type="button" class="col-2 row2 blue" value="8" onclick="addChar(this.form.display, '8')">
+                     <input type="button" class="col-2 row2 blue" value="9" onclick="addChar(this.form.display, '9')">
+                     <input type="button" class="col-2 row2 orange" value="x&#94;" onclick="if(checkNum(this.form.display.value)) { exp(this.form) }">
+                     <input type="button" class="col-2 row2 green" value="/" onclick="addChar(this.form.display, '/')">
+                     <input type="button" class="col-2 row1 blue" value="4" onclick="addChar(this.form.display, '4')">
+                     <input type="button" class="col-2 row2 blue" value="5" onclick="addChar(this.form.display, '5')">
+                     <input type="button" class="col-2 row2 blue" value="6" onclick="addChar(this.form.display, '6')">
+                     <input type="button" class="col-2 row2 orange" value="ln" onclick="if(checkNum(this.form.display.value)) { ln(this.form) }">
+                     <input type="button" class="col-2 row2 green" value="*" onclick="addChar(this.form.display, '*')">
+                     <input type="button" class="col-2 row1 blue" value="1" onclick="addChar(this.form.display, '1')">
+                     <input type="button" class="col-2 row2 blue" value="2" onclick="addChar(this.form.display, '2')">
+                     <input type="button" class="col-2 row2 blue" value="3" onclick="addChar(this.form.display, '3')">
+                     <input type="button" class="col-2 row2 orange" value="&radic;" onclick="if(checkNum(this.form.display.value)) { sqrt(this.form) }">
+                     <input type="button" class="col-2 row2 green" value="-" onclick="addChar(this.form.display, '-')">
+                     <input type="button" class="col-2 row1 green" value="&#177"onclick="changeSign(this.form.display)">
+                     <input type="button" class="col-2 row2 blue" value="0" onclick="addChar(this.form.display, '0')">
+                     <input type="button" class="col-2 row2 green" value="." onclick="addChar(this.form.display, '.')">
+                     <input type="button" class="col-2 row2 orange" value="x2" onclick="if(checkNum(this.form.display.value)) { square(this.form) }">
+                     <input type="button" class="col-2 row2 green" value="+" onclick="addChar(this.form.display, '+')">
+                     <input type="button" class="col-2 row1 yellow" value="(" onclick="addChar(this.form.display, '(')">
+                     <input type="button" class="col-2 row2 yellow" value=")" onclick="addChar(this.form.display, ')')">
+                     <input type="button" class="col-2 row2 orange" value="cos" onclick="if(checkNum(this.form.display.value)) { cos(this.form) }">
+                     <input type="button" class="col-2 row2 orange" value="sin" onclick="if(checkNum(this.form.display.value)) { sin(this.form) }">
+                     <input type="button" class="col-2 row2 orange" value="tan" onclick="if(checkNum(this.form.display.value)) { tan(this.form) }">
                   </div>
                </form>
             </div>
