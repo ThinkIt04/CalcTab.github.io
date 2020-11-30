@@ -13,6 +13,11 @@ function m2(){
      document.getElementById('form2').style.height = "0";
      document.getElementById('form3').style.height = "auto";
 }
+function copyInput2() {
+     var copy = document.getElementById('display');
+     copy.select();
+     document.execCommand("copy");
+}
 function addChar(input, character) {
      if (input.value == null || input.value == "0")
          input.value = character

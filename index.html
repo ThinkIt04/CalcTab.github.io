@@ -46,28 +46,28 @@
                      <div id="div" class="col-12"></div>
                   </nav>
                   <div class="row">
+                     <input type="button" class="yellow" onclick="copyInput()" id="copy" value="Copy">
                      <input class="col-12" type="text" name="result" id="result" value="0" autocomplete="off">
-                     <input type="button" class="col-2 row1 red" onclick="copyInput()" id="copy" value="Copy">
-                     <input type="button" class="col-2 row2 red" onclick="this.form.result.value = '0' " id="cancel" value="DEL">
-                     <input type="button" class="col-2 row2 red" onclick="deleteChar(this.form.result)" value="⌫">
-                     <input type="button" class="col-2 row2 red" onclick="solve()" value="=">
-                     <input type="button" class="col-2 row2 green" onclick="display('.')" value=".">
-                     <input type="button" class="col-2 row1 blue" onclick="display('7')" value="7">
-                     <input type="button" class="col-2 row2 blue" onclick="display('8')" value="8">
-                     <input type="button" class="col-2 row2 blue" onclick="display('9')" value="9">
-                     <input type="button" class="col-2 row2 green" onclick="display('(')" value="(">
-                     <input type="button" class="col-2 row2 green" onclick="display(')')" value=")">
-                     <input type="button" class="col-2 row1 blue" onclick="display('4')" value="4">
-                     <input type="button" class="col-2 row2 blue" onclick="display('5')" value="5">
-                     <input type="button" class="col-2 row2 blue" onclick="display('6')" value="6">
-                     <input type="button" class="col-2 row2 green" onclick="display('/')" value="/">
-                     <input type="button" class="col-2 row2 green" onclick="display('*')" value="*">
-                     <input type="button" class="col-2 row1 blue" onclick="display('3')" value="3">
-                     <input type="button" class="col-2 row2 blue" onclick="display('2')" value="2">
-                     <input type="button" class="col-2 row2 blue" onclick="display('1')" value="1">
-                     <input type="button" class="col-2 row2 green" onclick="display('-')" value="-">
-                     <input type="button" class="col-2 row2 green" onclick="display('+')" value="+">
-                     <input type="button" class="col-12 col-sm-7 row5 blue" onclick="display('0')" value="0">
+                     <input type="button" class="col-2 row3 red" onclick="this.form.result.value = '0' " id="cancel" value="DEL">
+                     <input type="button" class="col-2 row4 red" onclick="deleteChar(this.form.result)" value="⌫">
+                     <input type="button" class="col-2 row4 red" onclick="solve()" value="=">
+                     <input type="button" class="col-2 row5 green" onclick="display('.')" value=".">
+                     <input type="button" class="col-2 row3 blue" onclick="display('7')" value="7">
+                     <input type="button" class="col-2 row4 blue" onclick="display('8')" value="8">
+                     <input type="button" class="col-2 row4 blue" onclick="display('9')" value="9">
+                     <input type="button" class="col-2 row5 green" onclick="display('/')" value="/">
+                     <input type="button" class="col-2 row3 blue" onclick="display('4')" value="4">
+                     <input type="button" class="col-2 row4 blue" onclick="display('5')" value="5">
+                     <input type="button" class="col-2 row4 blue" onclick="display('6')" value="6">
+                     <input type="button" class="col-2 row5 green" onclick="display('*')" value="*">
+                     <input type="button" class="col-2 row3 blue" onclick="display('3')" value="3">
+                     <input type="button" class="col-2 row4 blue" onclick="display('2')" value="2">
+                     <input type="button" class="col-2 row4 blue" onclick="display('1')" value="1">
+                     <input type="button" class="col-2 row5 green" onclick="display('-')" value="-">
+                     <input type="button" class="col-2 row3 orange" onclick="display('(')" value="(">
+                     <input type="button" class="col-2 row4 blue" onclick="display('0')" value="0">
+                     <input type="button" class="col-2 row4 orange" onclick="display(')')" value=")">
+                     <input type="button" class="col-2 row5 green" onclick="display('+')" value="+">
                   </div>
                </form>
                <form id="form1">
@@ -91,6 +91,7 @@
                      <div id="div" class="col-12"></div>
                   </nav>
                   <div class="row">
+                     <input type="button" id="copy2" onclick="copyInput2()" class="yellow" value="Copy">
                      <input class="col-12" type="text" name="display" id="display" value="0" autocomplete="off">
                      <input type="button" class="col-2 row1 red" value="DEL" onclick="this.form.display.value= 0 ">
                      <input type="button" class="col-2 row2 red" value="⌫" onclick="deleteChar(this.form.display)">

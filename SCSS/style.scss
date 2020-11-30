@@ -290,8 +290,15 @@ html{
                                         background-color: #2b0e36;
                                         box-shadow: 0px -5px 0px 0px #82409D;
                                    }
+                                   input[value=Copy]{
+                                        z-index: 1;
+                                        padding-right: 00.5rem;
+                                        padding-left: 00.5rem;
+                                   }
                                    #copy{
-                                        padding: 0;
+                                        position: absolute;
+                                        left: 1.75rem;
+                                        bottom: 18.3rem;
                                    }
                                    @media (max-width:586px) {
                                         .row3{
@@ -308,25 +315,13 @@ html{
                                         }
                                    }
                                    .row3{
-                                        margin: 0 1rem 1rem 0;
-                                        @media (max-width:586px) {
-                                             margin: 0 1.9rem 1rem 0.9rem;
-                                        }
-                                        @media (max-width:470px) {
-                                             margin: 0 1.25rem 1rem 0.75rem;
-                                        }
-                                        @media (max-width:356px) {
-                                             margin: 0 0 1rem 0;
-                                        }
-                                        @media (max-width:281px) {
-                                             margin: 0 0 1rem 0;
-                                        }
+                                        margin: 0 0 1rem 3.5rem;
                                    }
                                    .row4{
-                                        margin: 0 0 0 0.5rem;
+                                        margin: 0 0 1rem 1rem;
                                    }
                                    .row5{
-                                        margin: 0 0 1rem 0;
+                                        margin: 0 3.5rem 1rem 1rem;
                                    }
                                    input[type=button]{
                                         border-radius: 5px;
@@ -416,6 +411,11 @@ html{
                                              padding-bottom: 0.25rem;
                                         }
                                    }
+                              }
+                              #copy2{
+                                   position: absolute;
+                                   left: 1.75rem;
+                                   bottom: 21.55rem;
                               }
                          }
                     }
