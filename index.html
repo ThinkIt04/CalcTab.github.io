@@ -1,202 +1,286 @@
 <!doctype html>
 <html lang="en">
-   <head>
-      <!-- Required meta tags -->
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-      <!-- Bootstrap CSS -->
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-      <!-- SCSS -->
-      <link rel="stylesheet" href="SCSS/style.css">
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-      <!-- SCRIPT -->
-      <script src="SCRIPT/script2.js"></script>
-      <script src="SCRIPT/script.js"></script>
+   <!-- SCSS -->
+   <link rel="stylesheet" href="SCSS/style.css">
 
-      <!-- font-awesome -->
-      <script type="text/javascript">
-       document.write(unescape('%3c%73%63%72%69%70%74%20%73%72%63%3d%22%68%74%74%70%73%3a%2f%2f%6b%69%74%2e%66%6f%6e%74%61%77%65%73%6f%6d%65%2e%63%6f%6d%2f%34%62%38%66%38%32%33%32%30%32%2e%6a%73%22%20%63%72%6f%73%73%6f%72%69%67%69%6e%3d%22%61%6e%6f%6e%79%6d%6f%75%73%22%3e%3c%2f%73%63%72%69%70%74%3e'));
-      </script>
+   <!-- SCRIPT -->
+   <script src="SCRIPT/script2.js"></script>
+   <script src="SCRIPT/script.js"></script>
 
-      <!-- title -->
-      <link rel = "icon" href = "IMAGES/calctab.png" type = "image/x-icon"> 
-      <title>CalcTab</title>
-   </head>
-   <body onload="startTime()" onclick="dark()" data-spy="scroll" data-target="#list-example" data-offset="0">
-      <nav class="nav-bar">
-         <h1><i class="fas fa-calculator"></i><span> C</span>alc<span>T</span>ab</h1>
-         <div id="list-example" class="nav-pills">
-            <a id="li1" class="nav-link" href="#list-item-1">Home</a>
-            <a id="li2" class="nav-link" href="#list-item-2">Rate Us</a>
-            <a id="li3" class="nav-link" href="https://thinkit04.github.io/somefeelings.github.io/" target="_blank">Some Feelings</a>
-            <a id="li4" class="nav-link" href="#list-item-3">Report Problem</a>
-         </div>
-         <i id="bar" onclick="bar()" class="fas fa-bars"></i><i id="back" onclick="barn()" class="fas fa-times"></i>
-      </nav>
-      <nav id="date-time"></nav>
-      <div id="whole">
-         <div id="list-item-1">
-            <div id="calculus" class="container">
-               <i class="fas fa-ellipsis-h" onclick="menu()"></i>
-               <form id="form2">
-                  <nav id="nav" class="row">
-                     <h3 class="col-12">Calculator</h3>
-                     <div id="div" class="col-12"></div>
-                  </nav>
-                  <div class="row">
-                     <input type="button" class="yellow" onclick="copyInput()" id="copy" value="Copy">
-                     <input class="col-12" type="text" name="result" id="result" value="0" autocomplete="off">
-                     <input type="button" class="col-2 row3 red" onclick="this.form.result.value = '0' " id="cancel" value="DEL">
-                     <input type="button" class="col-2 row4 red" onclick="deleteChar(this.form.result)" value="⌫">
-                     <input type="button" class="col-2 row4 red" onclick="solve()" value="=">
-                     <input type="button" class="col-2 row5 green" onclick="display('.')" value=".">
-                     <input type="button" class="col-2 row3 blue" onclick="display('7')" value="7">
-                     <input type="button" class="col-2 row4 blue" onclick="display('8')" value="8">
-                     <input type="button" class="col-2 row4 blue" onclick="display('9')" value="9">
-                     <input type="button" class="col-2 row5 green" onclick="display('/')" value="/">
-                     <input type="button" class="col-2 row3 blue" onclick="display('4')" value="4">
-                     <input type="button" class="col-2 row4 blue" onclick="display('5')" value="5">
-                     <input type="button" class="col-2 row4 blue" onclick="display('6')" value="6">
-                     <input type="button" class="col-2 row5 green" onclick="display('*')" value="*">
-                     <input type="button" class="col-2 row3 blue" onclick="display('3')" value="3">
-                     <input type="button" class="col-2 row4 blue" onclick="display('2')" value="2">
-                     <input type="button" class="col-2 row4 blue" onclick="display('1')" value="1">
-                     <input type="button" class="col-2 row5 green" onclick="display('-')" value="-">
-                     <input type="button" class="col-2 row3 orange" onclick="display('(')" value="(">
-                     <input type="button" class="col-2 row4 blue" onclick="display('0')" value="0">
-                     <input type="button" class="col-2 row4 orange" onclick="display(')')" value=")">
-                     <input type="button" class="col-2 row5 green" onclick="display('+')" value="+">
-                  </div>
-               </form>
-               <form id="form1">
-                  <nav id="nav2" class="row">
-                     <h3 class="col-12">Options</h3>
-                     <div id="div" class="col-12"></div>
-                  </nav>
-                  <div class="row">
-                     <input type="button" class="col-12" value="Calculator" onclick="m1()">
-                     <input type="button" class="col-12" value="Scientific Calculator" onclick="m2()">
-                     <input type="button" class="col-12" value="Age Calculator (commming soon)">
-                     <input type="button" class="col-12" value="Weight Converter (commming soon)">
-                     <input type="button" class="col-12" value="Length Converter (commming soon)">
-                     <input type="button" class="col-12" value="Area Converter (commming soon)">
-                     <input type="button" class="col-12" value="Currency Converter (commming soon)">
-                  </div>
-               </form>
-               <form id="form3">
-                  <nav id="nav" class="row">
-                     <h3 class="col-12">Scientific Calculator</h3>
-                     <div id="div" class="col-12"></div>
-                  </nav>
-                  <div class="row">
-                     <input type="button" id="copy2" onclick="copyInput2()" class="yellow" value="Copy">
-                     <input class="col-12" type="text" name="display" id="display" value="0" autocomplete="off">
-                     <input type="button" class="col-2 row1 red" value="DEL" onclick="this.form.display.value= 0 ">
-                     <input type="button" class="col-2 row2 red" value="⌫" onclick="deleteChar(this.form.display)">
-                     <input type="button" class="col-2 row2 red" value="="onclick="if(checkNum(this.form.display.value)) { compute(this.form) }">
-                     <input type="button" class="col-2 row2 orange" value="&#960;" onclick="addChar(this.form.display,'3.14159265359')">
-                     <input type="button" class="col-2 row2 green" value="&#37;" onclick="percent(this.form.display)">
-                     <input type="button" class="col-2 row1 blue" value="7"onclick="addChar(this.form.display, '7')">
-                     <input type="button" class="col-2 row2 blue" value="8" onclick="addChar(this.form.display, '8')">
-                     <input type="button" class="col-2 row2 blue" value="9" onclick="addChar(this.form.display, '9')">
-                     <input type="button" class="col-2 row2 orange" value="x&#94;" onclick="if(checkNum(this.form.display.value)) { exp(this.form) }">
-                     <input type="button" class="col-2 row2 green" value="/" onclick="addChar(this.form.display, '/')">
-                     <input type="button" class="col-2 row1 blue" value="4" onclick="addChar(this.form.display, '4')">
-                     <input type="button" class="col-2 row2 blue" value="5" onclick="addChar(this.form.display, '5')">
-                     <input type="button" class="col-2 row2 blue" value="6" onclick="addChar(this.form.display, '6')">
-                     <input type="button" class="col-2 row2 orange" value="ln" onclick="if(checkNum(this.form.display.value)) { ln(this.form) }">
-                     <input type="button" class="col-2 row2 green" value="*" onclick="addChar(this.form.display, '*')">
-                     <input type="button" class="col-2 row1 blue" value="1" onclick="addChar(this.form.display, '1')">
-                     <input type="button" class="col-2 row2 blue" value="2" onclick="addChar(this.form.display, '2')">
-                     <input type="button" class="col-2 row2 blue" value="3" onclick="addChar(this.form.display, '3')">
-                     <input type="button" class="col-2 row2 orange" value="&radic;" onclick="if(checkNum(this.form.display.value)) { sqrt(this.form) }">
-                     <input type="button" class="col-2 row2 green" value="-" onclick="addChar(this.form.display, '-')">
-                     <input type="button" class="col-2 row1 green" value="&#177"onclick="changeSign(this.form.display)">
-                     <input type="button" class="col-2 row2 blue" value="0" onclick="addChar(this.form.display, '0')">
-                     <input type="button" class="col-2 row2 green" value="." onclick="addChar(this.form.display, '.')">
-                     <input type="button" class="col-2 row2 orange" value="x2" onclick="if(checkNum(this.form.display.value)) { square(this.form) }">
-                     <input type="button" class="col-2 row2 green" value="+" onclick="addChar(this.form.display, '+')">
-                     <input type="button" class="col-2 row1 yellow" value="(" onclick="addChar(this.form.display, '(')">
-                     <input type="button" class="col-2 row2 yellow" value=")" onclick="addChar(this.form.display, ')')">
-                     <input type="button" class="col-2 row2 orange" value="cos" onclick="if(checkNum(this.form.display.value)) { cos(this.form) }">
-                     <input type="button" class="col-2 row2 orange" value="sin" onclick="if(checkNum(this.form.display.value)) { sin(this.form) }">
-                     <input type="button" class="col-2 row2 orange" value="tan" onclick="if(checkNum(this.form.display.value)) { tan(this.form) }">
-                  </div>
-               </form>
-            </div>
-         </div>
-         <div id="list-item-2">
-            <div id="rate" class="container">
-               <form id="form">
-                  <nav id="nav" class="row">
-                     <h3 class="col-12">Rate Us</h3>
-                  </nav>
-                  <div class="fill">
-                     <input class="enter" type="text" name="First Name" id="First Name" autocomplete="off" required>
-                     <label class="labl" for="First Name"><h5><i class="far fa-user"></i> First Name</h5></label>
-                  </div>
-                  <div class="fill">
-                     <input class="enter" type="text" name="Last Name" id="Last Name" autocomplete="off" required>
-                     <label class="labl" for="Last Name"><h5><i class="far fa-user"></i> Last Name</h5></label>
-                  </div>
-                  <div class="fill">
-                     <label id="rat"><h5>Rating</h5></label><br>
-                     <div id="rates">
-                        <input type="radio" name="rating" id="1s" value="5"><label for="1s" class="rat"><i class="fas fa-star"></i></label>
-                        <input type="radio" name="rating" id="2s" value="4"><label for="2s" class="rat"><i class="fas fa-star"></i></label>
-                        <input type="radio" name="rating" id="3s" value="3"><label for="3s" class="rat"><i class="fas fa-star"></i></label>
-                        <input type="radio" name="rating" id="4s" value="2"><label for="4s" class="rat"><i class="fas fa-star"></i></label>
-                        <input type="radio" name="rating" id="5s" value="1"><label for="5s" class="rat"><i class="fas fa-star"></i></label>
-                     </div>
-                  </div>
-                  <div class="fill">
-                     <textarea class="enter" name="Comment" id="Comment" cols="30" rows="1" required></textarea>
-                     <label class="labl" for="Comment"><h5><i class="far fa-comment"></i> Comment</h5></label>
-                  </div>
-                  <button><h5>Submit <i class="far fa-paper-plane"></i></h5></button>
-               </form>
-            </div>
-         </div>
-         <div id="list-item-3">
-            <div id="report" class="container">
-               <form id="form">
-                  <nav id="nav" class="row">
-                     <h3 class="col-12">Report Problem</h3>
-                  </nav>
-                  <div class="fill">
-                     <input class="enter" type="text" name="First Name" id="First Name" autocomplete="off" required>
-                     <label class="labl" for="First Name"><h5><i class="far fa-user"></i> First Name</h5></label>
-                  </div>
-                  <div class="fill">
-                     <input class="enter" type="text" name="Last Name" id="Last Name" autocomplete="off" required>
-                     <label class="labl" for="Last Name"><h5><i class="far fa-user"></i> Last Name</h5></label>
-                  </div>
-                  <div class="fill">
-                     <textarea class="enter" name="Problem" id="Problem" cols="30" rows="1" required></textarea>
-                     <label class="labl" for="Problem"><h5><i class="far fa-comment"></i> Comment</h5></label>
-                  </div>
-                  <button><h5>Submit <i class="far fa-paper-plane"></i></h5></button>
-               </form>
-            </div>
+   <!-- font-awesome -->
+   <script type="text/javascript">
+      document.write(unescape('%3c%73%63%72%69%70%74%20%73%72%63%3d%22%68%74%74%70%73%3a%2f%2f%6b%69%74%2e%66%6f%6e%74%61%77%65%73%6f%6d%65%2e%63%6f%6d%2f%34%62%38%66%38%32%33%32%30%32%2e%6a%73%22%20%63%72%6f%73%73%6f%72%69%67%69%6e%3d%22%61%6e%6f%6e%79%6d%6f%75%73%22%3e%3c%2f%73%63%72%69%70%74%3e'));
+   </script>
+
+   <!-- title -->
+   <link rel="icon" href="IMAGES/calctab.png" type="image/x-icon">
+   <title>CalcTab</title>
+</head>
+
+<body onload="startTime()" data-spy="scroll" data-target="#list-example" data-offset="0">
+   <div id="loading"></div>
+   <nav class="nav-bar">
+      <h1><i class="fas fa-calculator"></i><span> C</span>alc<span>T</span>ab</h1>
+      <div id="list-example" class="nav-pills">
+         <a id="li1" class="nav-link" href="#list-item-1">Home</a>
+         <a id="li2" class="nav-link" href="#list-item-2">Rate Us</a>
+         <a id="li3" class="nav-link" href="https://thinkit04.github.io/somefeelings.github.io/" target="_blank">Some
+            Feelings</a>
+         <a id="li4" class="nav-link" href="#list-item-3">Report Problem</a>
+      </div>
+      <i id="bar" onclick="bar()" class="fas fa-bars"></i><i id="back" onclick="barn()" class="fas fa-times"></i>
+   </nav>
+   <p id="dummy">CalcTab, a calculating website. A step towards making your life easier</p>
+   <nav id="date-time"></nav>
+   <div id="whole">
+      <div id="list-item-1">
+         <div id="calculus" class="container">
+            <i class="fas fa-ellipsis-h" onclick="menu()"></i>
+            <form id="form2">
+               <nav id="nav" class="row">
+                  <h3 class="col-12">Calculator</h3>
+                  <div id="div" class="col-12"></div>
+               </nav>
+               <div class="row">
+                  <input type="button" class="yellow" onclick="copyInput()" id="copy" value="Copy">
+                  <input class="col-12" type="text" name="result" id="result" value="0" autocomplete="off">
+                  <input type="button" class="col-2 row3 red" onclick="this.form.result.value = '0' " id="cancel"
+                     value="DEL">
+                  <input type="button" class="col-2 row4 red" onclick="deleteChar(this.form.result)" value="⌫">
+                  <input type="button" class="col-2 row4 red" onclick="solve()" value="=">
+                  <input type="button" class="col-2 row5 green" onclick="display('.')" value=".">
+                  <input type="button" class="col-2 row3 blue" onclick="display('7')" value="7">
+                  <input type="button" class="col-2 row4 blue" onclick="display('8')" value="8">
+                  <input type="button" class="col-2 row4 blue" onclick="display('9')" value="9">
+                  <input type="button" class="col-2 row5 green" onclick="display('/')" value="/">
+                  <input type="button" class="col-2 row3 blue" onclick="display('4')" value="4">
+                  <input type="button" class="col-2 row4 blue" onclick="display('5')" value="5">
+                  <input type="button" class="col-2 row4 blue" onclick="display('6')" value="6">
+                  <input type="button" class="col-2 row5 green" onclick="display('*')" value="*">
+                  <input type="button" class="col-2 row3 blue" onclick="display('3')" value="3">
+                  <input type="button" class="col-2 row4 blue" onclick="display('2')" value="2">
+                  <input type="button" class="col-2 row4 blue" onclick="display('1')" value="1">
+                  <input type="button" class="col-2 row5 green" onclick="display('-')" value="-">
+                  <input type="button" class="col-2 row3 orange" onclick="display('(')" value="(">
+                  <input type="button" class="col-2 row4 blue" onclick="display('0')" value="0">
+                  <input type="button" class="col-2 row4 orange" onclick="display(')')" value=")">
+                  <input type="button" class="col-2 row5 green" onclick="display('+')" value="+">
+               </div>
+            </form>
+            <form id="form1">
+               <nav id="nav2" class="row">
+                  <h3 class="col-12">Options</h3>
+                  <div id="div" class="col-12"></div>
+               </nav>
+               <div class="row">
+                  <input type="button" class="col-12" value="Calculator" onclick="m1()">
+                  <input type="button" class="col-12" value="Scientific Calculator" onclick="m2()">
+                  <input type="button" class="col-12" value="Age Calculator" onclick="m3()">
+                  <input type="button" class="col-12" value="Weight Converter (commming soon)">
+                  <input type="button" class="col-12" value="Length Converter (commming soon)">
+                  <input type="button" class="col-12" value="Area Converter (commming soon)">
+                  <input type="button" class="col-12" value="Currency Converter (commming soon)">
+               </div>
+            </form>
+            <form id="form3">
+               <nav id="nav" class="row">
+                  <h3 class="col-12">Scientific Calculator</h3>
+                  <div id="div" class="col-12"></div>
+               </nav>
+               <div class="row">
+                  <input type="button" id="copy2" onclick="copyInput2()" class="yellow" value="Copy">
+                  <input class="col-12" type="text" name="display" id="display" value="0" autocomplete="off">
+                  <input type="button" class="col-2 row1 red" value="DEL" onclick="this.form.display.value= 0 ">
+                  <input type="button" class="col-2 row2 red" value="⌫" onclick="deleteChar(this.form.display)">
+                  <input type="button" class="col-2 row2 red" value="=" onclick="if(checkNum(this.form.display.value)) { compute(this.form) }">
+                  <input type="button" class="col-2 row2 orange" value="&#960;" onclick="addChar(this.form.display,'3.14159265359')">
+                  <input type="button" class="col-2 row2 green" value="&#37;" onclick="percent(this.form.display)">
+                  <input type="button" class="col-2 row1 blue" value="7" onclick="addChar(this.form.display, '7')">
+                  <input type="button" class="col-2 row2 blue" value="8" onclick="addChar(this.form.display, '8')">
+                  <input type="button" class="col-2 row2 blue" value="9" onclick="addChar(this.form.display, '9')">
+                  <input type="button" class="col-2 row2 orange" value="x&#94;" onclick="if(checkNum(this.form.display.value)) { exp(this.form) }">
+                  <input type="button" class="col-2 row2 green" value="/" onclick="addChar(this.form.display, '/')">
+                  <input type="button" class="col-2 row1 blue" value="4" onclick="addChar(this.form.display, '4')">
+                  <input type="button" class="col-2 row2 blue" value="5" onclick="addChar(this.form.display, '5')">
+                  <input type="button" class="col-2 row2 blue" value="6" onclick="addChar(this.form.display, '6')">
+                  <input type="button" class="col-2 row2 orange" value="ln" onclick="if(checkNum(this.form.display.value)) { ln(this.form) }">
+                  <input type="button" class="col-2 row2 green" value="*" onclick="addChar(this.form.display, '*')">
+                  <input type="button" class="col-2 row1 blue" value="1" onclick="addChar(this.form.display, '1')">
+                  <input type="button" class="col-2 row2 blue" value="2" onclick="addChar(this.form.display, '2')">
+                  <input type="button" class="col-2 row2 blue" value="3" onclick="addChar(this.form.display, '3')">
+                  <input type="button" class="col-2 row2 orange" value="&radic;" onclick="if(checkNum(this.form.display.value)) { sqrt(this.form) }">
+                  <input type="button" class="col-2 row2 green" value="-" onclick="addChar(this.form.display, '-')">
+                  <input type="button" class="col-2 row1 green" value="&#177" onclick="changeSign(this.form.display)">
+                  <input type="button" class="col-2 row2 blue" value="0" onclick="addChar(this.form.display, '0')">
+                  <input type="button" class="col-2 row2 green" value="." onclick="addChar(this.form.display, '.')">
+                  <input type="button" class="col-2 row2 orange" value="x2" onclick="if(checkNum(this.form.display.value)) { square(this.form) }">
+                  <input type="button" class="col-2 row2 green" value="+" onclick="addChar(this.form.display, '+')">
+                  <input type="button" class="col-2 row1 yellow" value="(" onclick="addChar(this.form.display, '(')">
+                  <input type="button" class="col-2 row2 yellow" value=")" onclick="addChar(this.form.display, ')')">
+                  <input type="button" class="col-2 row2 orange" value="cos" onclick="if(checkNum(this.form.display.value)) { cos(this.form) }">
+                  <input type="button" class="col-2 row2 orange" value="sin" onclick="if(checkNum(this.form.display.value)) { sin(this.form) }">
+                  <input type="button" class="col-2 row2 orange" value="tan" onclick="if(checkNum(this.form.display.value)) { tan(this.form) }">
+               </div>
+            </form>
+            <form id="form4" name="birthday">
+               <nav id="nav" class="row">
+                  <h3 class="col-12">Age Calculator</h3>
+                  <div id="div" class="col-12"></div>
+               </nav>
+               <div class="row" id="inn">
+                  <p class="date col-12">Select Date of Birth:</p>&nbsp;
+                  <select name="day" class="col-3 blue">
+                     <option hidden disabled selected value>Date</option>
+                     <script
+                        type="text/javascript">for (var j = 1; j < 32; j++)document.write("<option value=" + j + ">" + j + "</option>");
+                     </script>
+                  </select>
+                  <select name="month" class="col-3 green">
+                     <option hidden disabled selected value>Month</option>
+                     <script
+                        type="text/javascript">for (var i = 1; i < 13; i++)document.write("<option value=" + i + ">" + mS[i - 1] + "</option>");
+                     </script>
+                  </select>
+                  <select name="year" class="col-3 orange">
+                     <option hidden disabled selected value>Year</option>
+                     <script
+                        type="text/javascript">for (var k = startyear; k <= endyear; k++)document.write("<option value=" + k + ">" + k + "</option>");
+                     </script>
+                  </select>
+                  <p id="alert"></p>
+                  <p id="info">
+                     Don't worry your will not be shared...
+                  </p>
+                  <input class="button col-12 red" name="start" onclick="calage()" value="Calculate" type="button">
+               </div>
+               <div class="row" id="res">
+                  <span class="row col-12">
+                     <p>You have been:</p>
+                     <span class="col-12" id="old"></span>
+                  </span>
+                  <span class="row col-12">
+                     <p class="date1">You have been living for:</p>
+                     <span class="col-12" id="for"></span>
+                  </span>
+                  <span class="row col-12">
+                     <p>Your next birthday will be after:</p>
+                     <span class="col-12" id="next"></span>
+                  </span>
+                  <input type="button" value="New Input" class="col-12 red" onclick="newinn()">
+               </div>
+            </form>
          </div>
       </div>
-
-      <!-- footer -->
-      <div id="footer">
-         <p id="main"><i class="fas fa-calculator"></i><span> C</span>alc<span>T</span>ab By <span id="name">Ashish Chandra</span></p>
-         <button data-toggle="collapse" data-target="#share" aria-expanded="false" aria-controls="share"><i class="fas fa-share-alt"></i></button>
+      <div id="list-item-2">
+         <div id="rate" class="container">
+            <form id="form">
+               <nav id="nav" class="row">
+                  <h3 class="col-12">Rate Us</h3>
+               </nav>
+               <div class="fill">
+                  <input class="enter" type="text" name="First Name" id="First Name" autocomplete="off" required>
+                  <label class="labl" for="First Name">
+                     <h5><i class="far fa-user"></i> First Name</h5>
+                  </label>
+               </div>
+               <div class="fill">
+                  <input class="enter" type="text" name="Last Name" id="Last Name" autocomplete="off" required>
+                  <label class="labl" for="Last Name">
+                     <h5><i class="far fa-user"></i> Last Name</h5>
+                  </label>
+               </div>
+               <div class="fill">
+                  <label id="rat">
+                     <h5>Rating</h5>
+                  </label><br>
+                  <div id="rates">
+                     <input type="radio" name="rating" id="1s" value="5"><label for="1s" class="rat"><i
+                           class="fas fa-star"></i></label>
+                     <input type="radio" name="rating" id="2s" value="4"><label for="2s" class="rat"><i
+                           class="fas fa-star"></i></label>
+                     <input type="radio" name="rating" id="3s" value="3"><label for="3s" class="rat"><i
+                           class="fas fa-star"></i></label>
+                     <input type="radio" name="rating" id="4s" value="2"><label for="4s" class="rat"><i
+                           class="fas fa-star"></i></label>
+                     <input type="radio" name="rating" id="5s" value="1"><label for="5s" class="rat"><i
+                           class="fas fa-star"></i></label>
+                  </div>
+               </div>
+               <div class="fill">
+                  <textarea class="enter" name="Comment" id="Comment" cols="30" rows="1" required></textarea>
+                  <label class="labl" for="Comment">
+                     <h5><i class="far fa-comment"></i> Comment</h5>
+                  </label>
+               </div>
+               <button>
+                  <h5>Submit <i class="far fa-paper-plane"></i></h5>
+               </button>
+            </form>
+         </div>
       </div>
-      <div class="collapse" id="share"></div>
+      <div id="list-item-3">
+         <div id="report" class="container">
+            <form id="form">
+               <nav id="nav" class="row">
+                  <h3 class="col-12">Report Problem</h3>
+               </nav>
+               <div class="fill">
+                  <input class="enter" type="text" name="First Name" id="First Name" autocomplete="off" required>
+                  <label class="labl" for="First Name">
+                     <h5><i class="far fa-user"></i> First Name</h5>
+                  </label>
+               </div>
+               <div class="fill">
+                  <input class="enter" type="text" name="Last Name" id="Last Name" autocomplete="off" required>
+                  <label class="labl" for="Last Name">
+                     <h5><i class="far fa-user"></i> Last Name</h5>
+                  </label>
+               </div>
+               <div class="fill">
+                  <textarea class="enter" name="Problem" id="Problem" cols="30" rows="1" required></textarea>
+                  <label class="labl" for="Problem">
+                     <h5><i class="far fa-comment"></i> Comment</h5>
+                  </label>
+               </div>
+               <button>
+                  <h5>Submit <i class="far fa-paper-plane"></i></h5>
+               </button>
+            </form>
+         </div>
+      </div>
+   </div>
 
-      <!-- Script -->
-      <script>
-         const myurl = "https://thinkit04.github.io/CalcTab.github.io/";
-         const mytext = " ______________         Here_are_some_easier_ways_to_calculate...";
-         document.getElementById("share").innerHTML = `<a href="whatsapp://send?text=${myurl + mytext}" data-action="share/whatsapp/share" target="_blank"><i class="fa fa-whatsapp"></i> Share</a><br><a href="https://t.me/share/url?url=https://thinkit04.github.io/CalcTab.github.io/&amp;text=Here are some easier ways to calculate..."><i class="fa fa-telegram"></i> Share</a><br><a href="http://www.facebook.com/sharer.php?u=https://thinkit04.github.io/CalcTab.github.io/&t=Here_are_some_easier_ways_to_calculate..."><i class="fa fa-facebook"></i> Post</a><br><a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Here_are_some_easier_ways_to_calculate...&url=https://thinkit04.github.io/CalcTab.github.io/"><i class="fa fa-twitter"></i> Tweet</a>`;
-      </script>
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-   </body>
+   <!-- footer -->
+   <div id="footer">
+      <p id="main"><i class="fas fa-calculator"></i><span> C</span>alc<span>T</span>ab By <span id="name">Ashish
+            Chandra</span></p>
+      <button data-toggle="collapse" data-target="#share" aria-expanded="false" aria-controls="share"><i
+            class="fas fa-share-alt"></i></button>
+   </div>
+   <div class="collapse" id="share"></div>
+
+   <!-- Script -->
+   <script>
+      const myurl = "https://thinkit04.github.io/CalcTab.github.io/";
+      const mytext = " ______________         Here_are_some_easier_ways_to_calculate...";
+      document.getElementById("share").innerHTML = `<a href="whatsapp://send?text=${myurl + mytext}" data-action="share/whatsapp/share" target="_blank"><i class="fa fa-whatsapp"></i> Share</a><br><a href="https://t.me/share/url?url=https://thinkit04.github.io/CalcTab.github.io/&amp;text=Here are some easier ways to calculate..."><i class="fa fa-telegram"></i> Share</a><br><a href="http://www.facebook.com/sharer.php?u=https://thinkit04.github.io/CalcTab.github.io/&t=Here_are_some_easier_ways_to_calculate..."><i class="fa fa-facebook"></i> Post</a><br><a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Here_are_some_easier_ways_to_calculate...&url=https://thinkit04.github.io/CalcTab.github.io/"><i class="fa fa-twitter"></i> Tweet</a>`;
+   </script>
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"></script>
+</body>
+
 </html>
