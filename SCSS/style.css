@@ -13,17 +13,24 @@ html body {
   background-attachment: fixed;
   background-size: cover;
   height: 100vh;
-  z-index: 0;
   overflow: hidden;
   background-position: center;
 }
 
-html body #loading {
-  position: fixed;
-  z-index: 999999999999999999999999999999999999999999999999999;
-  width: 100%;
-  height: 100vh;
-  background: #1d1f20 url("https://codetea.com/content/images/2017/09/CSS3-Loading-Spinner.gif") no-repeat center;
+html body .dark-mode {
+  background-color: rgba(24, 24, 24, 0.5);
+}
+
+html body .dark-mode form {
+  background-color: rgba(24, 24, 24, 0.5);
+}
+
+html body .dark-mode form nav {
+  background-color: rgba(144, 144, 144, 0.5);
+}
+
+html body .dark-mode form nav div {
+  background-color: rgba(24, 24, 24, 0.5);
 }
 
 html body a {
@@ -33,14 +40,6 @@ html body a {
 
 html body a:hover {
   color: gainsboro;
-}
-
-html body #dummy {
-  position: absolute;
-  height: 0;
-  width: 0;
-  z-index: -100;
-  opacity: 0;
 }
 
 html body .nav-bar {
@@ -305,10 +304,10 @@ html body #whole #list-item-1 #calculus {
   background-image: linear-gradient(to bottom left, #1a1717, #dc3545);
   border-radius: 1.5rem;
   position: absolute;
-  top: 55%;
+  top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -55%);
-          transform: translate(-50%, -55%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   padding: 1rem;
 }
 
@@ -590,99 +589,6 @@ html body #whole #list-item-1 #calculus #form3 #copy2 {
   padding: 0.25rem 0.5rem 0.125rem 0.5rem;
 }
 
-html body #whole #list-item-1 #calculus #form4 {
-  height: 0;
-  overflow: hidden;
-}
-
-html body #whole #list-item-1 #calculus #form4 #inn {
-  height: auto;
-  overflow: hidden;
-}
-
-html body #whole #list-item-1 #calculus #form4 #inn p {
-  font-size: 1.25rem;
-}
-
-html body #whole #list-item-1 #calculus #form4 #inn select {
-  outline: none;
-  border: none;
-  border-radius: 1rem;
-  font-size: 1.25rem;
-  color: gainsboro;
-  padding: 0.5rem auto 0.5rem;
-  text-align: center;
-}
-
-html body #whole #list-item-1 #calculus #form4 #inn select option {
-  text-align: center;
-  color: #3a3a3a;
-  background-color: gainsboro;
-}
-
-html body #whole #list-item-1 #calculus #form4 #inn #alert {
-  margin-top: 1rem;
-  padding: 0;
-  color: #b86f44;
-  border-bottom: 2px solid #b86f44;
-}
-
-html body #whole #list-item-1 #calculus #form4 #inn #info {
-  margin-top: 1rem;
-  padding: 0;
-  color: #b8b844;
-}
-
-html body #whole #list-item-1 #calculus #form4 #inn input[type=button] {
-  margin-bottom: 1rem;
-}
-
-html body #whole #list-item-1 #calculus #form4 #res {
-  overflow: hidden;
-  height: 0;
-  opacity: 0;
-  padding-bottom: 1rem;
-}
-
-html body #whole #list-item-1 #calculus #form4 #res input {
-  text-align: center;
-  font-size: 1.5rem;
-}
-
-html body #whole #list-item-1 #calculus #form4 #res span {
-  padding: 0.5rem;
-  margin: 0.25rem 0.5rem 0.25rem 0.5rem;
-  text-align: center;
-  border-radius: 1rem;
-  border: 2px solid #a3a3a3;
-}
-
-html body #whole #list-item-1 #calculus #form4 #res span p {
-  font-size: 1.2rem;
-  padding: 0;
-  margin: 0.25rem 0 0.25rem 0;
-  border-bottom: 2px solid #ce3323;
-}
-
-html body #whole #list-item-1 #calculus #form4 #res span span {
-  padding: 0;
-  border-radius: 0;
-  margin: 0;
-  background-color: transparent;
-  border: none;
-  font-size: 1.5rem;
-}
-
-html body #whole #list-item-1 #calculus #form4 #res span .bd {
-  border: none;
-  outline: none;
-  background-color: transparent;
-}
-
-html body #whole #list-item-1 #calculus #form4 #res input[type=button] {
-  margin-top: 00.25rem;
-}
-
 html body #whole #list-item-2 {
   overflow: hidden;
   width: 100%;
@@ -696,11 +602,10 @@ html body #whole #list-item-2 .container {
   background-image: linear-gradient(to bottom left, #1a1717, #dc3545);
   border-radius: 1.5rem;
   position: absolute;
-  overflow: auto;
-  top: 55%;
+  top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -55%);
-          transform: translate(-50%, -55%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   padding: 1rem;
 }
 
@@ -718,12 +623,12 @@ html body #whole #list-item-2 .container {
 
 html body #whole #list-item-2 .container form {
   width: 100%;
-  height: 65vh;
+  height: 100%;
   padding: 0 1rem 1rem 1rem;
   position: relative;
   border-radius: 1rem;
   background-color: #dcdcdc;
-  overflow: auto;
+  overflow: hidden;
 }
 
 html body #whole #list-item-2 .container form nav {
@@ -871,10 +776,10 @@ html body #whole #list-item-3 .container {
   background-image: linear-gradient(to bottom left, #1a1717, #dc3545);
   border-radius: 1.5rem;
   position: absolute;
-  top: 55%;
+  top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -55%);
-          transform: translate(-50%, -55%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   padding: 1rem;
 }
 
@@ -892,12 +797,12 @@ html body #whole #list-item-3 .container {
 
 html body #whole #list-item-3 .container form {
   width: 100%;
-  height: 55vh;
+  height: 100%;
   padding: 0 1rem 1rem 1rem;
   position: relative;
   border-radius: 1rem;
   background-color: #dcdcdc;
-  overflow: auto;
+  overflow: hidden;
 }
 
 html body #whole #list-item-3 .container form nav {
