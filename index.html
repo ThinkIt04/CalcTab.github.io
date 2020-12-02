@@ -150,8 +150,8 @@
                   </select>
                   <select name="year" class="orange">
                      <option hidden disabled selected value>Year</option>
-                     <script
-                        type="text/javascript">for (var k = startyear; k <= endyear; k++)document.write("<option value=" + k + ">" + k + "</option>");
+                     <script type="text/javascript">
+                        for (var k = startyear; k <= endyear; k++)document.write("<option value=" + k + ">" + k + "</option>");
                      </script>
                   </select>
                   <p id="alert"></p>
@@ -161,19 +161,19 @@
                   <input class="button col-12 red" name="start" onclick="calage()" value="Calculate" type="button">
                </div>
                <div class="row" id="res">
-                  <span class="row col-12">
+                  <span>
                      <p>You have been:</p>
-                     <span class="col-12" id="old"></span>
+                     <span id="old"></span>
                   </span>
-                  <span class="row col-12">
+                  <span>
                      <p class="date1">You have been living for:</p>
-                     <span class="col-12" id="for"></span>
+                     <span id="for"></span>
                   </span>
-                  <span class="row col-12">
+                  <span>
                      <p>Your next birthday will be after:</p>
-                     <span class="col-12" id="next"></span>
+                     <span id="next"></span>
                   </span>
-                  <input type="button" value="New Input" class="col-12 red" onclick="newinn()">
+                  <input type="button" value="New Input" onclick="newinn()">
                </div>
             </form>
             <form id="form5">

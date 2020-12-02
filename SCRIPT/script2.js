@@ -1,50 +1,50 @@
 function menu(){
-     document.getElementById('form2').style.height = "0";
-     document.getElementById('form3').style.height = "0";
-     document.getElementById('form4').style.height = "0";
-     document.getElementById('form5').style.height = "0";
-     document.getElementById('form6').style.height = "0";
-     document.getElementById('form1').style.height = "auto";
+     document.getElementById('form2').style.display = "none";
+     document.getElementById('form3').style.display = "none";
+     document.getElementById('form4').style.display = "none";
+     document.getElementById('form5').style.display = "none";
+     document.getElementById('form6').style.display = "none";
+     document.getElementById('form1').style.display = "block";
 }
 function m1(){
-     document.getElementById('form1').style.height = "0";
-     document.getElementById('form3').style.height = "0";
-     document.getElementById('form4').style.height = "0";
-     document.getElementById('form5').style.height = "0";
-     document.getElementById('form6').style.height = "0";
-     document.getElementById('form2').style.height = "auto";
+     document.getElementById('form1').style.display = "none";
+     document.getElementById('form3').style.display = "none";
+     document.getElementById('form4').style.display = "none";
+     document.getElementById('form5').style.display = "none";
+     document.getElementById('form6').style.display = "none";
+     document.getElementById('form2').style.display = "block";
 }
 function m2(){
-     document.getElementById('form1').style.height = "0";
-     document.getElementById('form2').style.height = "0";
-     document.getElementById('form4').style.height = "0";
-     document.getElementById('form5').style.height = "0";
-     document.getElementById('form6').style.height = "0";
-     document.getElementById('form3').style.height = "auto";
+     document.getElementById('form1').style.display = "none";
+     document.getElementById('form2').style.display = "none";
+     document.getElementById('form4').style.display = "none";
+     document.getElementById('form5').style.display = "none";
+     document.getElementById('form6').style.display = "none";
+     document.getElementById('form3').style.display = "block";
 }
 function m3(){
-     document.getElementById('form1').style.height = "0";
-     document.getElementById('form2').style.height = "0";
-     document.getElementById('form3').style.height = "0";
-     document.getElementById('form5').style.height = "0";
-     document.getElementById('form6').style.height = "0";
-     document.getElementById('form4').style.height = "auto";
+     document.getElementById('form1').style.display = "none";
+     document.getElementById('form2').style.display = "none";
+     document.getElementById('form3').style.display = "none";
+     document.getElementById('form5').style.display = "none";
+     document.getElementById('form6').style.display = "none";
+     document.getElementById('form4').style.display = "block";
 }
 function m4(){
-     document.getElementById('form1').style.height = "0";
-     document.getElementById('form2').style.height = "0";
-     document.getElementById('form3').style.height = "0";
-     document.getElementById('form4').style.height = "0";
-     document.getElementById('form6').style.height = "0";
-     document.getElementById('form5').style.height = "auto";
+     document.getElementById('form1').style.display = "none";
+     document.getElementById('form2').style.display = "none";
+     document.getElementById('form3').style.display = "none";
+     document.getElementById('form4').style.display = "none";
+     document.getElementById('form6').style.display = "none";
+     document.getElementById('form5').style.display = "block";
 }
 function m5(){
-     document.getElementById('form1').style.height = "0";
-     document.getElementById('form2').style.height = "0";
-     document.getElementById('form3').style.height = "0";
-     document.getElementById('form4').style.height = "0";
-     document.getElementById('form5').style.height = "0";
-     document.getElementById('form6').style.height = "auto";
+     document.getElementById('form1').style.display = "none";
+     document.getElementById('form2').style.display = "none";
+     document.getElementById('form3').style.display = "none";
+     document.getElementById('form4').style.display = "none";
+     document.getElementById('form5').style.display = "none";
+     document.getElementById('form6').style.display = "block";
 }
 function copyInput2() {
      var copy = document.getElementById('display');

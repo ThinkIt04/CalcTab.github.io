@@ -116,6 +116,7 @@ function calage() {
         var datee = diff / 1000 / 60 / 60 / 24;
         document.getElementById('next').innerHTML = datee + " day(s).";
         document.getElementById('inn').style.height = "0";
+        document.getElementById('inn').style.overflow = "hidden";
         document.getElementById('res').style.opacity = "1";
         document.getElementById('res').style.height = "60vh";
         document.getElementById('res').style.overflow = "auto";
@@ -123,7 +124,7 @@ function calage() {
 }
 function newinn(){
      document.getElementById('res').style.height = "0";
-     document.getElementById('res').style.overflow = "hidden";
+     document.getElementById('res').style.overflow = "auto";
      document.getElementById('res').style.opacity = "0";
      document.getElementById('inn').style.height = "auto";
 }
