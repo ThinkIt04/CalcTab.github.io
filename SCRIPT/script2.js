@@ -2,25 +2,36 @@ function menu(){
      document.getElementById('form2').style.height = "0";
      document.getElementById('form3').style.height = "0";
      document.getElementById('form4').style.height = "0";
+     document.getElementById('form5').style.height = "0";
      document.getElementById('form1').style.height = "auto";
 }
 function m1(){
      document.getElementById('form1').style.height = "0";
      document.getElementById('form3').style.height = "0";
      document.getElementById('form4').style.height = "0";
+     document.getElementById('form5').style.height = "0";
      document.getElementById('form2').style.height = "auto";
 }
 function m2(){
      document.getElementById('form1').style.height = "0";
      document.getElementById('form2').style.height = "0";
      document.getElementById('form4').style.height = "0";
+     document.getElementById('form5').style.height = "0";
      document.getElementById('form3').style.height = "auto";
 }
 function m3(){
      document.getElementById('form1').style.height = "0";
      document.getElementById('form2').style.height = "0";
      document.getElementById('form3').style.height = "0";
+     document.getElementById('form5').style.height = "0";
      document.getElementById('form4').style.height = "auto";
+}
+function m4(){
+     document.getElementById('form1').style.height = "0";
+     document.getElementById('form2').style.height = "0";
+     document.getElementById('form3').style.height = "0";
+     document.getElementById('form4').style.height = "0";
+     document.getElementById('form5').style.height = "auto";
 }
 function copyInput2() {
      var copy = document.getElementById('display');
@@ -69,10 +80,13 @@ function square(form) {
          form.display.value = eval(form.display.value) * eval(form.display.value)}
 function checkNum(str) {
      for (var i = 0; i < str.length; i++) {
-     var ch = str.charAt(i);
-     if (ch < "0" || ch > "9") {
-          if (ch != "/" && ch != "*" && ch != "+" && ch != "-" && ch != "."
-               && ch != "(" && ch != ")" && ch != "%") {
-               alert("invalid entry!")
-          return false            }        }    }
-     return true}
+          var ch = str.charAt(i);
+          if (ch < "0" || ch > "9") {
+               if (ch != "/" && ch != "*" && ch != "+" && ch != "-" && ch != "."
+                    && ch != "(" && ch != ")" && ch != "%") {
+                    alert("invalid entry!")
+               return false}
+          }
+     }
+     return true
+}
