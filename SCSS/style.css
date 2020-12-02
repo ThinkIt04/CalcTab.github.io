@@ -388,6 +388,13 @@ html body #whole #list-item-1 #calculus form div {
       justify-content: space-around;
 }
 
+@media (max-width: 355px) {
+  html body #whole #list-item-1 #calculus form div {
+    height: 55vh;
+    overflow: auto;
+  }
+}
+
 html body #whole #list-item-1 #calculus form div input[type=text] {
   color: white;
   border-radius: 5px;
@@ -550,6 +557,14 @@ html body #whole #list-item-1 #calculus form div .yellow:active {
 
 html body #whole #list-item-1 #calculus #form1 {
   height: 0;
+  overflow: hidden;
+}
+
+@media (max-width: 355px) {
+  html body #whole #list-item-1 #calculus #form1 .menu {
+    height: 55vh;
+    overflow: auto;
+  }
 }
 
 html body #whole #list-item-1 #calculus #form1 input[type=button] {
@@ -593,6 +608,13 @@ html body #whole #list-item-1 #calculus #form3 {
   }
 }
 
+@media (max-width: 355px) {
+  html body #whole #list-item-1 #calculus #form3 div {
+    height: 55vh;
+    overflow: auto;
+  }
+}
+
 html body #whole #list-item-1 #calculus #form3 #copy2 {
   position: absolute;
   left: 1.75rem;
@@ -605,9 +627,11 @@ html body #whole #list-item-1 #calculus #form4 {
   overflow: hidden;
 }
 
-html body #whole #list-item-1 #calculus #form4 #inn {
-  height: auto;
-  overflow: hidden;
+@media (max-width: 355px) {
+  html body #whole #list-item-1 #calculus #form4 #inn {
+    height: 55vh;
+    overflow: auto;
+  }
 }
 
 html body #whole #list-item-1 #calculus #form4 #inn p {
@@ -617,10 +641,14 @@ html body #whole #list-item-1 #calculus #form4 #inn p {
 html body #whole #list-item-1 #calculus #form4 #inn select {
   outline: none;
   border: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 0.5rem;
   border-radius: 1rem;
   font-size: 1.25rem;
   color: gainsboro;
-  padding: 0.25rem 1rem 0.25rem 1rem;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
   text-align: center;
 }
 
@@ -777,7 +805,7 @@ html body #whole #list-item-1 #calculus #form5 .cont .info .input span {
 
 html body #whole #list-item-1 #calculus #form5 .cont .info .input input {
   font-size: 1.5rem;
-  width: auto;
+  max-width: 90%;
   outline: none;
   background-color: transparent;
   border: 2px solid #fff;
@@ -798,10 +826,22 @@ html body #whole #list-item-1 #calculus #form5 .cont .info .currency-name {
   margin-left: 3rem;
 }
 
+@media (max-width: 355px) {
+  html body #whole #list-item-1 #calculus #form5 .cont .info .currency-name {
+    margin-left: 0rem;
+  }
+}
+
 html body #whole #list-item-1 #calculus #form5 .cont .info .base-currency-rate {
   font-size: 1rem;
   padding: 0;
   margin-left: 3rem;
+}
+
+@media (max-width: 355px) {
+  html body #whole #list-item-1 #calculus #form5 .cont .info .base-currency-rate {
+    margin-left: 0rem;
+  }
 }
 
 html body #whole #list-item-1 #calculus #form5 .cont ul.currencies li .close {

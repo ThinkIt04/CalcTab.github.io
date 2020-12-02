@@ -292,6 +292,10 @@ html{
                                    display: flex;
                                    align-items: center;
                                    justify-content: space-around;
+                                   @media (max-width:355px) {
+                                        height: 55vh;
+                                        overflow: auto;
+                                   }
                                    input[type=text]{
                                         color: white;
                                         border-radius: 5px;
@@ -406,6 +410,13 @@ html{
                          }
                          #form1{
                               height: 0;
+                              overflow: hidden;
+                              .menu{
+                                   @media (max-width:355px) {
+                                        height: 55vh;
+                                        overflow: auto;
+                                   }
+                              }
                               input[type=button]{
                                    border-radius: 5px;
                                    text-align: center;
@@ -441,6 +452,12 @@ html{
                                         }
                                    }
                               }
+                              div{
+                                   @media (max-width:355px) {
+                                        height: 55vh;
+                                        overflow: auto;
+                                   }
+                              }
                               #copy2{
                                    position: absolute;
                                    left: 1.75rem;
@@ -452,18 +469,22 @@ html{
                               height: 0;
                               overflow: hidden;
                               #inn{
-                                   height: auto;
-                                   overflow: hidden;
+                                   @media (max-width:355px) {
+                                        height: 55vh;
+                                        overflow: auto;
+                                   }
                                    p{
                                         font-size: 1.25rem;
                                    }
                                    select{
                                         outline: none;
                                         border: none;
+                                        align-self: center;
+                                        margin-top: 0.5rem;
                                         border-radius: 1rem;
                                         font-size: 1.25rem;
                                         color: gainsboro;
-                                        padding: 0.25rem 1rem 0.25rem 1rem;
+                                        padding: 0.25rem 0.5rem 0.25rem 0.5rem;
                                         text-align: center;
                                         &::-webkit-scrollbar {
                                              width: 5px;
@@ -598,7 +619,7 @@ html{
                                    
                                    .info .input input {
                                         font-size: 1.5rem;
-                                        width: auto;
+                                        max-width: 90%;
                                         outline: none;
                                         background-color: transparent;
                                         border: 2px solid #fff;
@@ -615,12 +636,19 @@ html{
                                         margin-bottom: 0.5rem;
                                         padding: 0;
                                         margin-left: 3rem;
+                                        @media (max-width:355px) {
+                                             margin-left: 0rem;
+                                        }
                                    }
                                    
                                    .info .base-currency-rate {
                                         font-size: 1rem;
                                         padding: 0;
                                         margin-left: 3rem;
+                                        
+                                        @media (max-width:355px) {
+                                             margin-left: 0rem;
+                                        }
                                    }
                                    
                                    ul.currencies li .close {
