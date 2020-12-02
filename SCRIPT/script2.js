@@ -1,17 +1,26 @@
 function menu(){
      document.getElementById('form2').style.height = "0";
      document.getElementById('form3').style.height = "0";
+     document.getElementById('form4').style.height = "0";
      document.getElementById('form1').style.height = "auto";
 }
 function m1(){
      document.getElementById('form1').style.height = "0";
      document.getElementById('form3').style.height = "0";
+     document.getElementById('form4').style.height = "0";
      document.getElementById('form2').style.height = "auto";
 }
 function m2(){
      document.getElementById('form1').style.height = "0";
      document.getElementById('form2').style.height = "0";
+     document.getElementById('form4').style.height = "0";
      document.getElementById('form3').style.height = "auto";
+}
+function m3(){
+     document.getElementById('form1').style.height = "0";
+     document.getElementById('form2').style.height = "0";
+     document.getElementById('form3').style.height = "0";
+     document.getElementById('form4').style.height = "auto";
 }
 function copyInput2() {
      var copy = document.getElementById('display');
