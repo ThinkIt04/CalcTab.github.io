@@ -69,6 +69,7 @@
          <a id="li1" class="nav-link" href="#list-item-1">Home</a>
          <a id="li2" class="nav-link" href="#list-item-2">Rate Us</a>
          <a id="li3" class="nav-link" href="https://thinkit04.github.io/somefeelings.github.io/" target="_blank">Some Feelings</a>
+         <a id="li4" class="nav-link" href="#list-item-3">About Us</a>
       </div>
       <i id="bar" onclick="bar()" class="fas fa-bars"></i><i id="back" onclick="barn()" class="fas fa-times"></i>
    </nav>
@@ -872,6 +873,68 @@
             </script>
          </div>
       </div>
+      <div id="list-item-3">
+         <div id="content">
+            <h2>We provide a
+               <span class="typed-text"></span><span class="cursor">&nbsp;</span>
+            </h2>
+            <h4>Please use it, response us and share it...</h4>
+            <div class="row">
+               <div class="col-md-8 col-sm-11">
+                  Do you like poems?<br>If yes then visit <a id="sp" href="https://thinkit04.github.io/somefeelings.github.io/">Some Feelings</a> there are some beautiful poems...
+               </div>
+               <div class="col-md-3 col-sm-11">
+                  <span>Links</span><br>
+                  <a href="#list-item-1">Home</a><br>
+                  <a href="#list-item-2">Rate Us</a>
+               </div>
+            </div>
+            <p><i class="far fa-copyright"></i> copyright 2020 Ashish Chandra. All rights are resrved.</p>
+         </div>
+      </div>
+      <script> 
+         const typedTextSpan = document.querySelector(".typed-text");
+         const cursorSpan = document.querySelector(".cursor");
+
+         const textArray = ["daily calculator.", "scientific calculator.", "age calculator.", "currency converter.", "unit converter."];
+         const typingDelay = 200;
+         const erasingDelay = 100;
+         const newTextDelay = 2000;
+         let textArrayIndex = 0;
+         let charIndex = 0;
+
+         function type() {
+         if (charIndex < textArray[textArrayIndex].length) {
+            if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+            typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(type, typingDelay);
+         } 
+         else {
+            cursorSpan.classList.remove("typing");
+            setTimeout(erase, newTextDelay);
+         }
+         }
+
+         function erase() {
+            if (charIndex > 0) {
+            if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+            typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+            charIndex--;
+            setTimeout(erase, erasingDelay);
+         } 
+         else {
+            cursorSpan.classList.remove("typing");
+            textArrayIndex++;
+            if(textArrayIndex>=textArray.length) textArrayIndex=0;
+            setTimeout(type, typingDelay + 1100);
+         }
+         }
+
+         document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+         if(textArray.length) setTimeout(type, newTextDelay + 250);
+         });
+    </script> 
    </div>
 
    <!-- footer -->
@@ -887,7 +950,7 @@
    <script>
       const myurl = "https://thinkit04.github.io/CalcTab.github.io/";
       const mytext = " ______________         Here_are_some_easier_ways_to_calculate...";
-      document.getElementById("share").innerHTML = `<a href="whatsapp://send?text=${myurl + mytext}" data-action="share/whatsapp/share" target="_blank"><i class="fa fa-whatsapp"></i> Share</a><br><a href="https://t.me/share/url?url=https://thinkit04.github.io/CalcTab.github.io/&amp;text=Here are some easier ways to calculate..."><i class="fa fa-telegram"></i> Share</a><br><a href="http://www.facebook.com/sharer.php?u=https://thinkit04.github.io/CalcTab.github.io/&t=Here_are_some_easier_ways_to_calculate..."><i class="fa fa-facebook"></i> Post</a><br><a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Here_are_some_easier_ways_to_calculate...&url=https://thinkit04.github.io/CalcTab.github.io/"><i class="fa fa-twitter"></i> Tweet</a>`;
+      document.getElementById("share").innerHTML = `<a href="#list-items-1" href="whatsapp://send?text=${myurl + mytext}" data-action="share/whatsapp/share" target="_blank"><i class="fa fa-whatsapp"></i> Share</a><br><a href="https://t.me/share/url?url=https://thinkit04.github.io/CalcTab.github.io/&amp;text=Here are some easier ways to calculate..."><i class="fa fa-telegram"></i> Share</a><br><a href="http://www.facebook.com/sharer.php?u=https://thinkit04.github.io/CalcTab.github.io/&t=Here_are_some_easier_ways_to_calculate..."><i class="fa fa-facebook"></i> Post</a><br><a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Here_are_some_easier_ways_to_calculate...&url=https://thinkit04.github.io/CalcTab.github.io/"><i class="fa fa-twitter"></i> Tweet</a>`;
    </script>
    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

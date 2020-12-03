@@ -223,10 +223,10 @@ html{
                               transition: all 0.4s ease-in-out;
                          }
                          &:hover::before{
-                              width: 14ch;
+                              width: 8ch;
                          }
                          &.active::before{
-                              width: 14ch;
+                              width: 8ch;
                          }
                     }
                }
@@ -1083,6 +1083,94 @@ html{
                                         background-color: #e74c3c;
                                    }
                               }
+                         }
+                    }
+               }
+               #list-item-3{
+                    overflow: hidden;
+                    width: 100%;
+                    position: relative;
+                    height: 100vh;
+                    background-color: rgba(26, 23, 23, 0.5);
+                    #content{
+                         position: absolute;
+                         text-align: center;
+                         max-height: 70vh;
+                         width: 90%;
+                         top: 55%;
+                         left: 50%;
+                         transform: translate(-50%,-55%);
+                         color: gainsboro;
+                         h2{
+                              font-weight: bold;
+                              span{
+                                   font-weight: normal;
+                                   color: #ce3323;
+                              }
+                         }
+                         span.cursor {
+                              display: inline-block;
+                              background-color: #ccc;
+                              margin-left: 0.1rem;
+                              width: 3px;
+                              animation: blink 1s infinite;
+                              @keyframes blink {
+                                   0%  { background-color: #ccc; }
+                                   49% { background-color: #ccc; }
+                                   50% { background-color: transparent; }
+                                   99% { background-color: transparent; }
+                                   100%  { background-color: #ccc; }
+                                 }
+                         }
+                         h3{
+                              border-top: 2px solid #ce3323;
+                              border-bottom: 2px solid #ce3323;
+                              margin: 1rem 0 1rem 0;
+                              a{
+                                   opacity: 1;
+                                   text-decoration: none;
+                                   &:hover{
+                                        opacity: 0.5;
+                                        border: none;
+                                   }
+                              }
+                              #gape{
+                                   color: gainsboro;
+                                   opacity: 0.3;
+                              }
+                         }
+                         .row{
+                              div{
+                                   font-size: 1.25rem;
+                                   border-radius: 1rem;
+                                   padding: auto;
+                                   text-align: center;
+                                   margin: 1rem 1rem 0 1.5rem;
+                                   span{
+                                        color: #ce3323;
+                                        font-weight: bold;
+                                   }
+                                   #sp{
+                                        color: #ce3323;
+                                   }
+                                   a{
+                                        text-decoration: none;
+                                        opacity: 1;
+                                        &:hover{
+                                             opacity: 0.5;
+                                        }
+                                   }
+                              }
+                              .col-md-8{
+                                   border: 2px dashed #ce3323;
+                              }
+                              .col-md-3{
+                                   border: 2px dashed gainsboro;
+                              }
+                         }
+                         p{
+                              margin-top: 1rem;
+                              opacity: 0.8;
                          }
                     }
                }
