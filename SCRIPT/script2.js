@@ -46,6 +46,26 @@ function m5(){
      document.getElementById('form5').style.display = "none";
      document.getElementById('form6').style.display = "block";
 }
+function rep(){
+   document.getElementById('ra1').style.display = "none";
+   document.getElementById('ra2').style.display = "none";
+   document.getElementById('rep').style.display = "none";
+   document.getElementById('ra1').innerHTML = ``;
+   document.getElementById('ra2').innerHTML = ``;
+   document.getElementById('pro').innerHTML = `<textarea class="enter" name="Problems" id="Problem" cols="30" rows="1" required></textarea><label class="labl" for="Problem"><h5><i class="far fa-comment"></i> Problem</h5></label>`;
+   document.getElementById('pro').style.display = "block";
+   document.getElementById('re').style.display = "inline-block";
+}
+function re(){
+   document.getElementById('pro').style.display = "none";
+   document.getElementById('re').style.display = "none";
+   document.getElementById('ra1').innerHTML = `<label id="rat"><h5>Rating</h5></label><br><div id="rates"><input type="radio" name="Ratings" id="1s" value="5"><label for="1s" class="rat"><i class="fas fa-star"></i></label><input type="radio" name="Ratings" id="2s" value="4"><label for="2s" class="rat"><i class="fas fa-star"></i></label><input type="radio" name="Ratings" id="3s" value="3"><label for="3s" class="rat"><i class="fas fa-star"></i></label><input type="radio" name="Ratings" id="4s" value="2"><label for="4s" class="rat"><i class="fas fa-star"></i></label><input type="radio" name="Ratings" id="5s" value="1"><label for="5s" class="rat"><i class="fas fa-star"></i></label>`;
+   document.getElementById('ra2').innerHTML = `<textarea class="enter" name="Comments" id="Comment" cols="30" rows="1" required></textarea><label class="labl" for="Comment"><h5><i class="far fa-comments"></i> Comment</h5></label>`;
+   document.getElementById('pro').innerHTML = ``;
+   document.getElementById('ra1').style.display = "block";
+   document.getElementById('ra2').style.display = "block";
+   document.getElementById('rep').style.display = "inline-block";
+}
 function copyInput2() {
      var copy = document.getElementById('display');
      copy.select();
@@ -158,15 +178,29 @@ function hi(){document.getElementById('t1').style.display='none';document.getEle
           var totext = document.getElementById('ttemp').options[document.getElementById('ttemp').selectedIndex].text;
           if(document.getElementById('vip').value==null||document.getElementById('tip').value.length==0)document.getElementById('top').value='Please enter No. of Units';
           else
-          if(from==1&&to==1)document.getElementById('top').value=ip+ ' ' +totext ;
-          if(from==1&&to==2)document.getElementById('top').value=((ip*9/5)+32*1).toFixed(2)+ ' ' +totext ;
+          if(from==1&&to==1)document.getElementById('top').value=ip+totext ;
+          if(from==1&&to==2)document.getElementById('top').value=((ip*9/5)+32*1).toFixed(2)+totext ;
           if(from==1&&to==3)document.getElementById('top').value=(ip*1+273.15*1).toFixed(2)+ ' ' +totext ;
-          if(from==2&&to==1)document.getElementById('top').value=((ip-32)*5/9).toFixed(2)+ ' ' +totext ;
-          if(from==2&&to==2)document.getElementById('top').value=ip+ ' ' +totext ;
+          if(from==2&&to==1)document.getElementById('top').value=((ip-32)*5/9).toFixed(2)+totext ;
+          if(from==2&&to==2)document.getElementById('top').value=ip+totext ;
           if(from==2&&to==3)document.getElementById('top').value=(((ip-32)*5/9)+273.15).toFixed(2)+ ' ' +totext ;
-          if(from==3&&to==1)document.getElementById('top').value=(ip-273.15).toFixed(2)+ ' ' +totext ;
-          if(from==3&&to==2)document.getElementById('top').value=((ip-273.15)*9/5 +32*1).toFixed(2)+ ' ' +totext ;
+          if(from==3&&to==1)document.getElementById('top').value=(ip-273.15).toFixed(2)+totext ;
+          if(from==3&&to==2)document.getElementById('top').value=((ip-273.15)*9/5 +32*1).toFixed(2)+totext ;
           if(from==3&&to==3)document.getElementById('top').value=ip+ ' ' +totext ;}
           function selunit(){
           if(document.getElementById('ut').value=='1'){hi();uc1();len();};if(document.getElementById('ut').value=='2'){hi();uc2();area();};if(document.getElementById('ut').value=='3'){hi();uc3();speed();};if(document.getElementById('ut').value=='4'){hi();uc4();weight();};if(document.getElementById('ut').value=='5'){hi();uc5();vol();};if(document.getElementById('ut').value=='6'){hi();uc6();temp();};}
           window.onload=function(){hi();uc1();len();}
+
+
+// formsubmit
+
+
+     function malt(){
+          document.getElementById("m-alert").style.display = "none";
+     };
+     function talt(){
+          document.getElementById("t-alert").style.display = "none";
+     };
+     function ealt(){
+          document.getElementById("e-alert").style.display = "none";
+     };

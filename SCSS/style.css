@@ -36,6 +36,82 @@ html body #loading {
   background: #1d1f20 url("https://codetea.com/content/images/2017/09/CSS3-Loading-Spinner.gif") no-repeat center;
 }
 
+html body #m-alert, html body #t-alert, html body #e-alert {
+  display: none;
+  position: fixed;
+  overflow: hidden;
+  background-color: #5a5a5a;
+  z-index: 999999999999999999999;
+  left: 50%;
+  top: 50%;
+  width: 358px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-box-shadow: 0 0 50px black;
+          box-shadow: 0 0 50px black;
+  font-family: 'Nova Mono', monospace;
+  color: gainsboro;
+}
+
+@media (max-width: 535px) {
+  html body #m-alert, html body #t-alert, html body #e-alert {
+    width: 70vw;
+  }
+}
+
+@media (min-width: 535px) {
+  html body #m-alert, html body #t-alert, html body #e-alert {
+    max-height: 95vh;
+  }
+}
+
+html body #m-alert p, html body #t-alert p, html body #e-alert p {
+  width: 100%;
+}
+
+html body #m-alert span, html body #t-alert span, html body #e-alert span {
+  display: -ms-grid;
+  display: grid;
+  place-self: center;
+}
+
+html body #m-alert .s2, html body #t-alert .s2, html body #e-alert .s2 {
+  display: -ms-grid;
+  display: grid;
+  place-self: right;
+}
+
+html body #m-alert h4, html body #t-alert h4, html body #e-alert h4 {
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border: none;
+  background-color: #882d22;
+  -webkit-box-shadow: 0px 5px 0px 0px #CE3323;
+          box-shadow: 0px 5px 0px 0px #CE3323;
+}
+
+html body #m-alert h4:active, html body #t-alert h4:active, html body #e-alert h4:active {
+  background-color: #e74c3c;
+  -webkit-transform: translate(0px, 5px);
+          transform: translate(0px, 5px);
+  -webkit-box-shadow: 0px 1px 0px 0px;
+          box-shadow: 0px 1px 0px 0px;
+}
+
+html body #m-alert h4:hover, html body #t-alert h4:hover, html body #e-alert h4:hover {
+  background-color: #e74c3c;
+}
+
 html body a {
   text-decoration: none;
   color: gainsboro;
@@ -821,6 +897,12 @@ html body #whole #list-item-1 #calculus #form5 .cont .flag {
   margin-bottom: 0.5rem;
 }
 
+@media (max-width: 470px) {
+  html body #whole #list-item-1 #calculus #form5 .cont .flag {
+    margin-right: 70%;
+  }
+}
+
 html body #whole #list-item-1 #calculus #form5 .cont .info {
   width: 78%;
   color: gainsboro;
@@ -843,6 +925,12 @@ html body #whole #list-item-1 #calculus #form5 .cont .info .input input {
   margin-bottom: 0.5rem;
 }
 
+@media (max-width: 470px) {
+  html body #whole #list-item-1 #calculus #form5 .cont .info .input input {
+    max-width: 80%;
+  }
+}
+
 html body #whole #list-item-1 #calculus #form5 .cont .info p {
   text-align: left;
 }
@@ -854,9 +942,16 @@ html body #whole #list-item-1 #calculus #form5 .cont .info .currency-name {
   margin-left: 3rem;
 }
 
+@media (max-width: 470px) {
+  html body #whole #list-item-1 #calculus #form5 .cont .info .currency-name {
+    margin-left: 0rem;
+  }
+}
+
 @media (max-width: 355px) {
   html body #whole #list-item-1 #calculus #form5 .cont .info .currency-name {
     margin-left: 0rem;
+    font-size: 1rem;
   }
 }
 
@@ -866,9 +961,16 @@ html body #whole #list-item-1 #calculus #form5 .cont .info .base-currency-rate {
   margin-left: 3rem;
 }
 
+@media (max-width: 470px) {
+  html body #whole #list-item-1 #calculus #form5 .cont .info .base-currency-rate {
+    margin-left: 0rem;
+  }
+}
+
 @media (max-width: 355px) {
   html body #whole #list-item-1 #calculus #form5 .cont .info .base-currency-rate {
     margin-left: 0rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -1107,7 +1209,7 @@ html body #whole #list-item-2 .container {
 
 html body #whole #list-item-2 .container form {
   width: 100%;
-  height: 65vh;
+  max-height: 70vh;
   padding: 0 1rem 1rem 1rem;
   position: relative;
   border-radius: 1rem;
@@ -1220,7 +1322,27 @@ html body #whole #list-item-2 .container form .fill .rat {
   transition: 0.4s ease-in-out;
 }
 
+html body #whole #list-item-2 .container form #pro, html body #whole #list-item-2 .container form #re {
+  display: none;
+}
+
+html body #whole #list-item-2 .container form #rep {
+  display: inline-block;
+}
+
+html body #whole #list-item-2 .container form #rep, html body #whole #list-item-2 .container form #re {
+  cursor: pointer;
+  padding: 0.25rem 0 0 0;
+  margin: 0;
+  border-bottom: 1px dashed #ce3323;
+}
+
+html body #whole #list-item-2 .container form #rep:hover, html body #whole #list-item-2 .container form #re:hover {
+  color: #ce3323;
+}
+
 html body #whole #list-item-2 .container form button {
+  cursor: pointer;
   border-radius: 5px;
   text-align: center;
   padding: 0.5rem 1rem 0 1rem;
@@ -1244,137 +1366,6 @@ html body #whole #list-item-2 .container form button:active {
 }
 
 html body #whole #list-item-2 .container form button:hover {
-  background-color: #e74c3c;
-}
-
-html body #whole #list-item-3 {
-  overflow: hidden;
-  width: 100%;
-  position: relative;
-  height: 100vh;
-}
-
-html body #whole #list-item-3 .container {
-  max-width: 576px;
-  background-image: -webkit-gradient(linear, right top, left bottom, from(#1a1717), to(#dc3545));
-  background-image: linear-gradient(to bottom left, #1a1717, #dc3545);
-  border-radius: 1.5rem;
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -55%);
-          transform: translate(-50%, -55%);
-  padding: 1rem;
-}
-
-@media (max-width: 586px) {
-  html body #whole #list-item-3 .container {
-    max-width: 460px;
-  }
-}
-
-@media (max-width: 470px) {
-  html body #whole #list-item-3 .container {
-    max-width: 360px;
-  }
-}
-
-html body #whole #list-item-3 .container form {
-  width: 100%;
-  height: 55vh;
-  padding: 0 1rem 1rem 1rem;
-  position: relative;
-  border-radius: 1rem;
-  background-color: #dcdcdc;
-  overflow: auto;
-}
-
-html body #whole #list-item-3 .container form nav {
-  position: relative;
-  margin-bottom: 1rem;
-  padding: 0.5rem 1rem 0 1rem;
-  background-color: #cacaca;
-}
-
-html body #whole #list-item-3 .container form nav h3 {
-  font-size: 1.5rem;
-}
-
-html body #whole #list-item-3 .container form input, html body #whole #list-item-3 .container form textarea {
-  outline: none;
-}
-
-html body #whole #list-item-3 .container form .fill {
-  width: 100%;
-  height: 4rem;
-  margin-bottom: 0.5rem;
-}
-
-html body #whole #list-item-3 .container form .fill .enter {
-  margin-top: 1.5rem;
-  font-size: 1.5rem;
-  background: none;
-  width: 100%;
-  padding-left: 1rem;
-  color: #4d4d4d;
-  -webkit-transition: 0.4s ease-in-out;
-  transition: 0.4s ease-in-out;
-  border: none;
-  border-bottom: 3px solid gray;
-}
-
-html body #whole #list-item-3 .container form .fill .enter:hover {
-  border-bottom: 3px solid #CE3323;
-}
-
-html body #whole #list-item-3 .container form .fill .enter:focus {
-  border-bottom: 3px solid #CE3323;
-}
-
-html body #whole #list-item-3 .container form .fill .enter:focus ~ label {
-  margin-top: 0rem;
-}
-
-html body #whole #list-item-3 .container form .fill .enter:valid {
-  border-bottom: 3px solid #CE3323;
-}
-
-html body #whole #list-item-3 .container form .fill .enter:valid ~ label {
-  margin-top: 0rem;
-}
-
-html body #whole #list-item-3 .container form .fill .labl {
-  position: absolute;
-  left: 1rem;
-  margin-top: 2rem;
-  -webkit-transition: 0.4s ease-in-out;
-  transition: 0.4s ease-in-out;
-}
-
-html body #whole #list-item-3 .container form button {
-  border-radius: 5px;
-  text-align: center;
-  padding: 0.5rem 1rem 0 1rem;
-  text-decoration: none;
-  color: #fff;
-  position: relative;
-  display: inline-block;
-  outline: none;
-  border: none;
-  background-color: #882d22;
-  -webkit-box-shadow: 0px 5px 0px 0px #CE3323;
-          box-shadow: 0px 5px 0px 0px #CE3323;
-}
-
-html body #whole #list-item-3 .container form button:active {
-  background-color: #e74c3c;
-  -webkit-transform: translate(0px, 5px);
-          transform: translate(0px, 5px);
-  -webkit-box-shadow: 0px 1px 0px 0px;
-          box-shadow: 0px 1px 0px 0px;
-}
-
-html body #whole #list-item-3 .container form button:hover {
   background-color: #e74c3c;
 }
 

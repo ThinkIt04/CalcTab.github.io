@@ -26,17 +26,49 @@
    <link rel="icon" href="IMAGES/calctab.png" type="image/x-icon">
    <title>CalcTab</title>
 </head>
-
-<body onload="startTime()" data-spy="scroll" data-target="#list-example" data-offset="0">
+<body onload="startTime(), load()" data-spy="scroll" data-target="#list-example" data-offset="0">
    <div id="loading"></div>
+   <div id="m-alert" class=" card">
+      <img src="https://us.123rf.com/450wm/maxborovkov/maxborovkov1809/maxborovkov180900067/110330061-stock-vector-autumn-welcome-sign-with-colorful-maple-leaves-vector-background-.jpg?ver=6" class="card-img-top" alt="Welcome">
+      <div class="card-body">
+        <h2 class="card-title">CalcTab</h2>
+        <hr>
+        <p class="card-text">
+          Hello, guys! <br><br>
+          Welcome you to this website. I wish you will injoy it... <br>
+          Please, use, response & share... <br>
+        </p>
+        <span>Thank-you :) </span><br>
+        <span class="s2">- By Ashish Chandra</span><br>
+        <h4 class="cl" onclick="malt()">Close</h4>
+      </div>
+    </div>
+    <div id="t-alert" class=" card tost">
+      <img src="https://www.tillamookcountypioneer.net/wp-content/uploads/2019/12/thank_you_card_maker_app01.jpg" class="card-img-top" alt="Thank-you">
+      <div class="card-body">
+        <h2 class="card-title">CalcTab</h2>
+        <hr>
+        <span>Thank-you so much for the response :) </span><br>
+        <span class="s2">- By Ashish Chandra</span><br>
+        <h4 class="cl" onclick="talt()">Close</h4>
+      </div>
+    </div>
+    <div id="e-alert" class=" card tost">
+      <img src="https://i0.wp.com/textfonts.net/wp-content/uploads/2020/03/Error-text-effect.jpg?fit=626%2C391&ssl=1" style="clip-path: polygon(0 25%, 100% 25%, 100% 75%, 0 75%);" class="card-img-top" alt="Error">
+      <div class="card-body">
+        <h2 class="card-title">CalcTab</h2>
+        <hr>
+        <span>Sorry there is an error :( </span><br>
+        <span class="s2">- By Ashish Chandra</span><br>
+        <h4 class="cl" onclick="ealt()">Close</h4>
+      </div>
+    </div>
    <nav class="nav-bar">
       <h1><i class="fas fa-calculator"></i><span> C</span>alc<span>T</span>ab</h1>
       <div id="list-example" class="nav-pills">
          <a id="li1" class="nav-link" href="#list-item-1">Home</a>
          <a id="li2" class="nav-link" href="#list-item-2">Rate Us</a>
-         <a id="li3" class="nav-link" href="https://thinkit04.github.io/somefeelings.github.io/" target="_blank">Some
-            Feelings</a>
-         <a id="li4" class="nav-link" href="#list-item-3">Report Problem</a>
+         <a id="li3" class="nav-link" href="https://thinkit04.github.io/somefeelings.github.io/" target="_blank">Some Feelings</a>
       </div>
       <i id="bar" onclick="bar()" class="fas fa-bars"></i><i id="back" onclick="barn()" class="fas fa-times"></i>
    </nav>
@@ -44,6 +76,7 @@
    <nav id="date-time"></nav>
    <div id="whole">
       <div id="list-item-1">
+         .
          <div id="calculus" class="container">
             <i class="fas fa-ellipsis-h" onclick="menu()"></i>
             <form id="form2">
@@ -762,15 +795,15 @@
                           <tr>
                                <td>Convert from
                                <td><select id=ftemp onchange=temp();>
-                                         <option value=1 selected>॰ Celcius
-                                         <option value=2>॰ Fahrenhite
+                                         <option value=1 selected>° Celcius
+                                         <option value=2>° Fahrenhite
                                          <option value=3>Kelvin
                                     </select>
                           <tr>
                                <td>Convert to
                                <td><select id=ttemp onchange=temp();>
-                                         <option value=1>॰ Celcius
-                                         <option value=2 selected>॰ Fahrenhite
+                                         <option value=1>° Celcius
+                                         <option value=2 selected>° Fahrenhite
                                          <option value=3>Kelvin
                                     </select>
                           <tr>
@@ -783,79 +816,60 @@
       </div>
       <div id="list-item-2">
          <div id="rate" class="container">
-            <form id="form">
+            <form id="form7" method="POST" autocomplete="off" name="google-sheet">
                <nav id="nav" class="row">
-                  <h3 class="col-12">Rate Us</h3>
+                  <h3 id="h3" class="col-12">Rate Us</h3>
                </nav>
+               <input type="text" name="Site Name" id="Site Name" value="CalcTab" style="display: none;">
                <div class="fill">
-                  <input class="enter" type="text" name="First Name" id="First Name" autocomplete="off" required>
+                  <input class="enter" type="text" name="First Names" id="First Name" autocomplete="off" required>
                   <label class="labl" for="First Name">
                      <h5><i class="far fa-user"></i> First Name</h5>
                   </label>
                </div>
                <div class="fill">
-                  <input class="enter" type="text" name="Last Name" id="Last Name" autocomplete="off" required>
+                  <input class="enter" type="text" name="Last Names" id="Last Name" autocomplete="off" required>
                   <label class="labl" for="Last Name">
                      <h5><i class="far fa-user"></i> Last Name</h5>
                   </label>
                </div>
-               <div class="fill">
+               <div id="ra1" class="fill">
                   <label id="rat">
                      <h5>Rating</h5>
                   </label><br>
                   <div id="rates">
-                     <input type="radio" name="rating" id="1s" value="5"><label for="1s" class="rat"><i
-                           class="fas fa-star"></i></label>
-                     <input type="radio" name="rating" id="2s" value="4"><label for="2s" class="rat"><i
-                           class="fas fa-star"></i></label>
-                     <input type="radio" name="rating" id="3s" value="3"><label for="3s" class="rat"><i
-                           class="fas fa-star"></i></label>
-                     <input type="radio" name="rating" id="4s" value="2"><label for="4s" class="rat"><i
-                           class="fas fa-star"></i></label>
-                     <input type="radio" name="rating" id="5s" value="1"><label for="5s" class="rat"><i
-                           class="fas fa-star"></i></label>
+                     <input type="radio" name="Ratings" id="1s" value="5"><label for="1s" class="rat"><i class="fas fa-star"></i></label>
+                     <input type="radio" name="Ratings" id="2s" value="4"><label for="2s" class="rat"><i class="fas fa-star"></i></label>
+                     <input type="radio" name="Ratings" id="3s" value="3"><label for="3s" class="rat"><i class="fas fa-star"></i></label>
+                     <input type="radio" name="Ratings" id="4s" value="2"><label for="4s" class="rat"><i class="fas fa-star"></i></label>
+                     <input type="radio" name="Ratings" id="5s" value="1"><label for="5s" class="rat"><i class="fas fa-star"></i></label>
                   </div>
                </div>
-               <div class="fill">
-                  <textarea class="enter" name="Comment" id="Comment" cols="30" rows="1" required></textarea>
+               <div id="ra2" class="fill">
+                  <textarea class="enter" name="Comments" id="Comment" cols="30" rows="1" required></textarea>
                   <label class="labl" for="Comment">
-                     <h5><i class="far fa-comment"></i> Comment</h5>
+                     <h5><i class="far fa-comments"></i> Comment</h5>
                   </label>
                </div>
+               <div id="pro" class="fill"></div>
                <button>
                   <h5>Submit <i class="far fa-paper-plane"></i></h5>
                </button>
+               <h5 id="rep" onclick="rep()">Report Problem</h5>
+               <h5 id="re" onclick="re()">Back</h5>
             </form>
-         </div>
-      </div>
-      <div id="list-item-3">
-         <div id="report" class="container">
-            <form id="form">
-               <nav id="nav" class="row">
-                  <h3 class="col-12">Report Problem</h3>
-               </nav>
-               <div class="fill">
-                  <input class="enter" type="text" name="First Name" id="First Name" autocomplete="off" required>
-                  <label class="labl" for="First Name">
-                     <h5><i class="far fa-user"></i> First Name</h5>
-                  </label>
-               </div>
-               <div class="fill">
-                  <input class="enter" type="text" name="Last Name" id="Last Name" autocomplete="off" required>
-                  <label class="labl" for="Last Name">
-                     <h5><i class="far fa-user"></i> Last Name</h5>
-                  </label>
-               </div>
-               <div class="fill">
-                  <textarea class="enter" name="Problem" id="Problem" cols="30" rows="1" required></textarea>
-                  <label class="labl" for="Problem">
-                     <h5><i class="far fa-comment"></i> Proplem</h5>
-                  </label>
-               </div>
-               <button>
-                  <h5>Submit <i class="far fa-paper-plane"></i></h5>
-               </button>
-            </form>
+            <script>
+               const scriptURL = 'https://script.google.com/macros/s/AKfycbx2KV-EZUTPe-WbxMSqg1O1H22TcizcjBW3MauczuSQazfKU3aG/exec';
+               const form = document.forms['google-sheet'];
+               const alt = document.getElementById("t-alert");
+               const eralt = document.getElementById("e-alert");
+               form.addEventListener('submit', e => {
+                     e.preventDefault()
+                     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                        .then(response => {alt.style.display = "block";})
+                        .catch(error => {eralt.style.display = "block";})
+               })
+            </script>
          </div>
       </div>
    </div>

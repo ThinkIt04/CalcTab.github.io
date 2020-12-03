@@ -16,8 +16,11 @@ function barn(){
      document.getElementById('back').style.display = "none";
      document.getElementById('bar').style.opacity = "1";
 }
+function load() {
+    document.getElementById('loading').style.display = "none";
+    document.getElementById("m-alert").style.display = "block";
+}
 function startTime() {
-     document.getElementById('loading').style.display = "none";
      var today = new Date();
      var h = today.getHours();
      var m = today.getMinutes();
