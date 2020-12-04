@@ -14,12 +14,13 @@ html{
           background-attachment: fixed;
           background-size: cover;
           background-color: transparent;
-          height: 300vh;
-          overflow: hidden;
+          height: 100vh;
+          overflow-y: auto;
           z-index: 0;
           background-position: center;
           &::-webkit-scrollbar {
                width: 5px;
+               background-color: transparent;
           }
           &::-webkit-scrollbar-thumb {
                border-radius: 2.5px;

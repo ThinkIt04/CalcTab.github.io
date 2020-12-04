@@ -14,13 +14,14 @@ html body {
   background-size: cover;
   background-color: transparent;
   height: 100vh;
-  overflow: hidden;
+  overflow-y: auto;
   z-index: 0;
   background-position: center;
 }
 
 html body::-webkit-scrollbar {
   width: 5px;
+  background-color: transparent;
 }
 
 html body::-webkit-scrollbar-thumb {
