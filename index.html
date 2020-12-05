@@ -21,6 +21,7 @@
    <script type="text/javascript">
       document.write(unescape('%3c%73%63%72%69%70%74%20%73%72%63%3d%22%68%74%74%70%73%3a%2f%2f%6b%69%74%2e%66%6f%6e%74%61%77%65%73%6f%6d%65%2e%63%6f%6d%2f%34%62%38%66%38%32%33%32%30%32%2e%6a%73%22%20%63%72%6f%73%73%6f%72%69%67%69%6e%3d%22%61%6e%6f%6e%79%6d%6f%75%73%22%3e%3c%2f%73%63%72%69%70%74%3e'));
    </script>
+   <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
 
    <!-- title -->
    <link rel="icon" href="IMAGES/calctab.png" type="image/x-icon">
@@ -70,6 +71,33 @@
          <a id="li2" class="nav-link" href="#list-item-2">Rate Us</a>
          <a id="li3" class="nav-link" href="https://thinkit04.github.io/somefeelings.github.io/" target="_blank">Some Feelings</a>
          <a id="li4" class="nav-link" href="#list-item-3">About Us</a>
+         <!-- dark-mode -->
+         <label id="dark" class="nav-link">
+            <input class='toggle-checkbox' id="toggle" type='checkbox'></input>
+            <div class='toggle-slot'>
+               <div class='sun-icon-wrapper'>
+                  <div class="iconify sun-icon" data-icon="feather-sun" data-inline="false"></div>
+               </div>
+               <div class='toggle-button'></div>
+               <div class='moon-icon-wrapper'>
+                  <div class="iconify moon-icon" data-icon="feather-moon" data-inline="false"></div>
+               </div>
+            </div>
+            <script>
+               const toggle = document.getElementById('toggle');
+               const body = document.body;
+
+               toggle.addEventListener('input', (e) => {
+                  const isChecked = e.target.checked;
+                  
+                  if(isChecked) {
+                     body.classList.add('dark-theme');
+                  } else {
+                     body.classList.remove('dark-theme');
+                  }
+               });
+            </script>
+         </label>
       </div>
       <i id="bar" onclick="bar()" class="fas fa-bars"></i><i id="back" onclick="barn()" class="fas fa-times"></i>
    </nav>
@@ -169,7 +197,7 @@
                   <div id="div" class="col-12"></div>
                </nav>
                <div class="row div" id="inn">
-                  <p class="date col-12">Select Date of Birth:</p>&nbsp;
+                  <p id="date" class="date col-12">Select Date of Birth:</p>&nbsp;
                   <select name="day" class="blue">
                      <option hidden disabled selected value>Date</option>
                      <script
@@ -196,15 +224,15 @@
                </div>
                <div class="row" id="res">
                   <span>
-                     <p>You have been:</p>
+                     <p id="ph1">You have been:</p>
                      <span id="old"></span>
                   </span>
                   <span>
-                     <p class="date1">You have been living for:</p>
+                     <p id="ph2" class="date1">You have been living for:</p>
                      <span id="for"></span>
                   </span>
                   <span>
-                     <p>Your next birthday will be after:</p>
+                     <p id="ph3">Your next birthday will be after:</p>
                      <span id="next"></span>
                   </span>
                   <input type="button" value="New Input" onclick="newinn()">
@@ -216,9 +244,9 @@
                   <div id="div" class="col-12"></div>
                </nav>
                <div class="cont row div">
-                  <ul class="col-12 currencies"></ul>
+                  <ul id="u1" class="col-12 currencies"></ul>
                   <input type="button" class="col-12 add-currency-btn green" value="Add Currency">
-                  <ul class="col-12 row add-currency-list"></ul>
+                  <ul id="u2" class="col-12 row add-currency-list"></ul>
                </div>
                <script type="text/javascript">
                   // Global Variables
@@ -585,7 +613,7 @@
                </nav>
                <div class="div row">
                   <div class="col-12">
-                     <table class="main">
+                     <table id="mt" class="main">
                         <tr>
                              <td>Unit Type</td>
                              <td><select id='ut' onchange=selunit();>

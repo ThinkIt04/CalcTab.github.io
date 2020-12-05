@@ -1,7 +1,7 @@
 function bar(){
      document.getElementById('bar').style.opacity = "0";
      document.getElementById('list-example').style.transform = "translate(0)";
-     document.getElementById('list-example').style.height = "15rem";
+     document.getElementById('list-example').style.height = "auto";
      document.getElementById('list-example').style.opacity = "1";
      document.getElementById('bar').style.display = "none";
      document.getElementById('back').style.display = "block";
@@ -11,7 +11,7 @@ function barn(){
      document.getElementById('back').style.opacity = "0";
      document.getElementById('list-example').style.height = "0";
      document.getElementById('list-example').style.opacity = "0";
-     document.getElementById('list-example').style.transform = "translate(-20rem)";
+     document.getElementById('list-example').style.transform = "translateY(-20rem)";
      document.getElementById('bar').style.display = "block";
      document.getElementById('back').style.display = "none";
      document.getElementById('bar').style.opacity = "1";

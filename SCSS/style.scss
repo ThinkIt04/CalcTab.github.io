@@ -9,6 +9,187 @@
 }
 
 html{
+     body.dark-theme{
+          #m-alert, #t-alert, #e-alert {
+               background-color: #3d3d3d;
+               color: #dcdcdc;
+          }
+          #whole{
+               #list-item-1{
+                   .container{
+                         i{
+                              color: gainsboro;
+                         }
+                         #form1{
+                              background-color: #3d3d3d;
+                              nav{
+                                   background-color: #5d5d5d;
+                                   h3{
+                                        color: gainsboro;
+                                   }
+                                   div{
+                                        background-color: #3d3d3d;
+                                   }
+                              }
+                         }
+                         #form2{
+                              background-color: #3d3d3d;
+                              nav{
+                                   background-color: #5d5d5d;
+                                   h3{
+                                        color: gainsboro;
+                                   }
+                                   div{
+                                        background-color: #3d3d3d;
+                                   }
+                              }
+                         }
+                         #form3{
+                              background-color: #3d3d3d;
+                              nav{
+                                   background-color: #5d5d5d;
+                                   h3{
+                                        color: gainsboro;
+                                   }
+                                   div{
+                                        background-color: #3d3d3d;
+                                   }
+                              }
+                         }
+                         #form4{
+                              background-color: #3d3d3d;
+                              nav{
+                                   background-color: #5d5d5d;
+                                   h3{
+                                        color: gainsboro;
+                                   }
+                                   div{
+                                        background-color: #3d3d3d;
+                                   }
+                              }
+                              #inn{
+                                   #date{
+                                        color: #808080;
+                                   }
+                              }
+                              #res{
+                                   span{
+                                        #ph1, #ph2, #ph3, #old, #for, #next{
+                                             color: #808080;
+                                        }
+                                   }
+                              }
+                         }
+                         #form5{
+                              background-color: #3d3d3d;
+                              nav{
+                                   background-color: #5d5d5d;
+                                   h3{
+                                        color: gainsboro;
+                                   }
+                                   div{
+                                        background-color: #3d3d3d;
+                                   }
+                              }
+                              .cont{
+                                   #u2{
+                                        background-color: #3d3d3d;
+                                        color: #afafaf;
+                                        li{
+                                             &:hover{
+                                                  color: #3d3d3d;
+                                             }
+                                        }
+                                   }
+                              }
+                         }
+                         #form6{
+                              background-color: #3d3d3d;
+                              nav{
+                                   background-color: #5d5d5d;
+                                   h3{
+                                        color: gainsboro;
+                                   }
+                                   div{
+                                        background-color: #3d3d3d;
+                                   }
+                              }
+                              div.div.row{
+                                   color: #afafaf;
+                                   div.col-12{
+                                        color: #afafaf;
+                                        #mt{
+                                             color: #afafaf;
+                                             #ut{
+                                                  color: #afafaf;
+                                             }
+                                        }
+                                   }
+                                   #t1{
+                                        color: #afafaf;
+                                        #lip, #flength, #tlength, #lop{
+                                             color: #afafaf;
+                                        }
+                                   }
+                                   #t2{
+                                        color: #afafaf;
+                                        #aip, #farea, #tarea, #aop{
+                                             color: #afafaf;
+                                        }
+                                   }#t3{
+                                        color: #afafaf;
+                                        #sip, #fspeed, #tspeed, #sop{
+                                             color: #afafaf;
+                                        }
+                                   }
+                                   #t4{
+                                        color: #afafaf;
+                                        #wip, #fweight, #tweight, #wop{
+                                             color: #afafaf;
+                                        }
+                                   }
+                                   #t5{
+                                        color: #afafaf;
+                                        #vip, #fvol, #tvol, #vop{
+                                             color: #afafaf;
+                                        }
+                                   }
+                                   #t6{
+                                        color: #afafaf;
+                                        #tip, #ftemp, #ttemp, #top{
+                                             color: #afafaf;
+                                        }
+                                   }
+                              }
+                         }
+                    } 
+               }
+               #list-item-2{
+                    .container{
+                         form{
+                              background-color: #3d3d3d;
+                              nav{
+                                   background-color: #5d5d5d;
+                                   h3{
+                                        color: gainsboro;
+                                   }
+                                   div{
+                                        background-color: #3d3d3d;
+                                   }
+                              }
+                              .fill{
+                                   .enter{
+                                        color: #808080;
+                                   }
+                                   label{
+                                        color: #afafaf;
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+     }
      body{
           background-image: url("../IMAGES/P4LP9H0-mathematics-wallpaper.jpg");
           background-attachment: fixed;
@@ -37,7 +218,7 @@ html{
                display: none;
                position: fixed;
                overflow: hidden;
-               background-color: rgb(44, 44, 44);
+               background-color: #dcdcdc;
                z-index: 999999999999999999999;
                left: 50%;
                top: 50%;
@@ -46,7 +227,7 @@ html{
                transform-origin: center;
                box-shadow: 0 0 50px black;
                font-family: 'Nova Mono', monospace;
-               color: gainsboro;
+               color: #3d3d3d;
                @media (max-width:535px) {
                    width: 70vw;
                }
@@ -160,6 +341,81 @@ html{
                          &.active{
                               opacity: 1;
                               background: none !important;
+                         }
+                    }
+                    #dark{
+                         opacity: 1;
+                         .toggle-checkbox {
+                         position: absolute;
+                         opacity: 0;
+                         cursor: pointer;
+                         height: 0;
+                         width: 0;
+                         }
+                         .toggle-slot {
+                         position: relative;
+                         height: 2rem;
+                         width: 4rem;
+                         border: 5px solid #afafaf;
+                         border-radius: 2rem;
+                         background-color: #dcdcdc80;
+                         transition: background-color 250ms;
+                         }
+                         .toggle-checkbox:checked ~ .toggle-slot {
+                         background-color: rgba(26, 23, 23, 0.4);
+                         }
+                         .toggle-button {
+                         transform: translate(2.2rem, 0.2rem);
+                         position: absolute;
+                         height: 1rem;
+                         width: 1rem;
+                         border-radius: 50%;
+                         background-color: #ffeccf;
+                         box-shadow: inset 0px 0px 0px 0.75rem #ffbb52;
+                         transition: background-color 250ms, border-color 250ms, transform 500ms cubic-bezier(.26,2,.46,.71);
+                         }
+                         .toggle-checkbox:checked ~ .toggle-slot .toggle-button {
+                         background-color: #485367;
+                         box-shadow: inset 0px 0px 0px 0.75em white;
+                         transform: translate(0.2rem, 0.2rem);
+                         }
+                         .sun-icon {
+                         position: absolute;
+                         height: 1rem;
+                         width: 1rem;
+                         color: #ffbb52;
+                         }
+                         .sun-icon-wrapper {
+                         position: absolute;
+                         height: 1rem;
+                         width: 1rem;
+                         opacity: 1;
+                         transform: translate(0.2rem, 0.2rem) rotate(15deg);
+                         transform-origin: 50% 50%;
+                         transition: opacity 150ms, transform 500ms cubic-bezier(.26,2,.46,.71);
+                         }
+                         .toggle-checkbox:checked ~ .toggle-slot .sun-icon-wrapper {
+                         opacity: 0;
+                         transform: translate(2rem, 0.2rem) rotate(0deg);
+                         }
+                         .moon-icon {
+                         position: absolute;
+                         height: 1rem;
+                         width: 1rem;
+                         color: white;
+                         }
+                         .moon-icon-wrapper {
+                         position: absolute;
+                         height: 1rem;
+                         width: 1rem;
+                         opacity: 0;
+                         transform: translate(1rem, 0.2rem) rotate(0deg);
+                         transform-origin: 50% 50%;
+                         transition: opacity 150ms, transform 500ms cubic-bezier(.26,2.5,.46,.71);
+                         }
+                         .toggle-checkbox:checked ~ .toggle-slot .moon-icon-wrapper {
+                         opacity: 1;
+                         transform: translate(2.2rem, 0.2rem) rotate(-15deg);
                          }
                     }
                     #li1{
@@ -536,6 +792,7 @@ html{
                                    }
                                    p{
                                         font-size: 1.25rem;
+                                        color: #3d3d3d;
                                    }
                                    select{
                                         outline: none;
@@ -618,6 +875,7 @@ html{
                                         p{
                                              font-size: 1.2rem;
                                              padding: 0;
+                                             color: #3d3d3d;
                                              margin: 0.25rem 0 0.25rem 0;
                                              border-bottom: 2px solid #ce3323;
                                         }
@@ -625,6 +883,7 @@ html{
                                              padding: 0;
                                              border-radius: 0;
                                              margin: 0;
+                                             color: #3d3d3d;
                                              background-color: transparent;
                                              border: none;
                                              font-size: 1.5rem;
@@ -659,7 +918,7 @@ html{
                                    position: relative;
                                    ul.currencies {
                                         height: 50vh;
-                                        background-color: gainsboro;
+                                        background-color: transparent;
                                         padding: 1rem 1rem 1rem 1rem;
                                         overflow-y: auto;
                                    }
@@ -839,7 +1098,6 @@ html{
                                         font-size: 1.2rem;
                                         font-weight: bold;
                                         border: none;
-                                        border-top: 0.1rem solid gainsboro;
                                         outline: none;
                                         width: 100%;
                                         cursor: pointer;
@@ -848,7 +1106,6 @@ html{
                                    }
 
                                    .add-currency-btn.open {
-                                        border-top: 0.1rem solid gainsboro;
                                         margin-top: 1rem;
                                         z-index: 1;
                                         background-color: #882d22;
@@ -874,6 +1131,8 @@ html{
                               display: none;
                               overflow: hidden;
                               .div{
+                                   color: #3d3d3d;
+                                   font-size: 1rem;
                                    #outer {
                                         background: transparent;
                                         text-align: center;
@@ -1018,6 +1277,7 @@ html{
                                         left: 1rem;
                                         margin-top: 2rem;
                                         transition: 0.4s ease-in-out;
+                                        color: #3d3d3d;
                                    }
                                    #rates{
                                         display: flex;
@@ -1088,11 +1348,11 @@ html{
                     }
                }
                #list-item-3{
-                    overflow: hidden;
                     width: 100%;
                     position: relative;
-                    height: 100vh;
+                    min-height: 100vh;
                     background-color: rgba(26, 23, 23, 0.5);
+                    margin-bottom: 2.5rem;
                     #content{
                          position: absolute;
                          text-align: center;
